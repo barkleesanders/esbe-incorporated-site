@@ -2286,8 +2286,8 @@ app.get(
         <p class="hero-note">Giving is processed securely by Every.org. ESBE Incorporated is an independent nonprofit and is not affiliated with the U.S. Department of Veterans Affairs.</p>
       </section>
 
-      <section class="programs" aria-labelledby="gift-title">
-        <div class="section-heading"><div><p class="section-mark">01</p></div><div><p class="eyebrow">SUPPORT THE MISSION</p><h2 id="gift-title">What your gift does.</h2></div></div>
+      <section class="programs" id="gift" aria-labelledby="gift-title">
+        <div class="section-heading"><div><p class="section-mark">01</p><a class="permalink" href="#gift" aria-label="Copy link to what your gift does">#</a></div><div><p class="eyebrow">SUPPORT THE MISSION</p><h2 id="gift-title">What your gift does.</h2></div></div>
         <div class="program-grid">
           <article class="program-card featured-program">
             <div class="program-top"><p class="program-kicker">DONOR-FUNDED</p><span>01</span></div>
@@ -2304,8 +2304,8 @@ app.get(
         </div>
       </section>
 
-      <section class="transparency" aria-labelledby="donate-transparency-title">
-        <div class="section-heading"><div><p class="section-mark">02</p></div><div><p class="eyebrow">TRANSPARENCY</p><h2 id="donate-transparency-title">Give with the facts in front of you.</h2></div></div>
+      <section class="transparency" id="donate-transparency" aria-labelledby="donate-transparency-title">
+        <div class="section-heading"><div><p class="section-mark">02</p><a class="permalink" href="#donate-transparency" aria-label="Copy link to transparency">#</a></div><div><p class="eyebrow">TRANSPARENCY</p><h2 id="donate-transparency-title">Give with the facts in front of you.</h2></div></div>
         <dl class="facts"><div><dt>Organization</dt><dd>ESBE Incorporated</dd></div><div><dt>Federal tax ID</dt><dd>87-1218291</dd></div><div><dt>Federal status</dt><dd>501(c)(3) nonprofit organization</dd></div><div><dt>CA charity registration</dt><dd>CT0403243</dd></div><div><dt>Giving processed by</dt><dd>Every.org</dd></div><div><dt>Program relationship</dt><dd>AIVA Claims is a program of ESBE Incorporated.</dd></div></dl>
         <div class="transparency-links"><a href="${determinationLetter}" rel="noreferrer">Read the IRS determination letter <span aria-hidden="true">↗</span></a><a href="https://apps.irs.gov/app/eos/" rel="noreferrer">Search the IRS Tax Exempt Organization Search <span aria-hidden="true">↗</span></a><a href="mailto:help@esbeincorporated.org?subject=ESBE%20Incorporated%20sponsorship%20or%20grant%20inquiry">Ask about sponsorships and grants <span aria-hidden="true">↗</span></a></div>
       </section>
