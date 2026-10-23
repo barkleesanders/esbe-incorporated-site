@@ -44,3 +44,9 @@ script download and transformed by `patch_ogpng.py`:
   `06508dda-654d-4f1d-a3be-b0eaa5c83717` at 100%.
 - `traks/` holds byte copies of the two Traks-managed parts for
   recovery reference; Traks tooling owns their contents.
+
+Lineage note (2026-10-23): this recovery line (local snapshot commits ->
+branch `og-png-fix-2026-10-23`) shares no history with `origin/main`,
+which holds a single 2026-10-06 "7-page rebuild" source commit
+(3f7282b). The branch is kept as the deploy record for the live bundle;
+do not force-merge the two histories.
