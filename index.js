@@ -2172,7 +2172,7 @@ app.get(
     <header class="site-header">
       <a class="wordmark" href="/" aria-label="ESBE Incorporated home">ESBE <span>INC.</span></a>
       <nav aria-label="Primary navigation">
-        <a href="#mission">Mission</a><a href="#programs">Programs</a><a href="/donate">Donate</a><a href="#transparency">Transparency</a><a href="#contact">Contact</a>
+        <a href="#mission">Mission</a><a href="#programs">Programs</a><a href="/community">Community</a><a href="/donate">Donate</a><a href="#transparency">Transparency</a><a href="#contact">Contact</a>
       </nav>
       <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">Visit AIVA Claims <span aria-hidden="true">\u2197</span></a>
     </header>
@@ -2988,6 +2988,89 @@ const OG_PNG_BYTES = Uint8Array.from(atob(
   "YII="
 ), (ch) => ch.charCodeAt(0));
 app.get("/og.png", (c) => c.body(OG_PNG_BYTES, 200, { "Content-Type": "image/png", "Cache-Control": "public, max-age=31536000, immutable" }));
+app.get(
+  "/community",
+  (c) => c.html(`<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ESBE Incorporated's community work on Treasure Island: public documentation of power outages and plain-language paths to official reporting channels for residents." />
+    <meta name="theme-color" content="#12352d" />
+    <link rel="canonical" href="https://esbeincorporated.org/community" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ESBE Incorporated" />
+    <meta property="og:title" content="Treasure Island Community Work | ESBE Incorporated" />
+    <meta property="og:description" content="Public documentation of Treasure Island power outages and clear paths to official reporting channels for residents." />
+    <meta property="og:url" content="https://esbeincorporated.org/community" />
+    <meta property="og:image" content="https://esbeincorporated.org/og.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Treasure Island Community Work | ESBE Incorporated" />
+    <meta name="twitter:description" content="Public documentation of Treasure Island power outages and clear paths to official reporting channels for residents." />
+    <meta name="twitter:image" content="https://esbeincorporated.org/og.svg" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Treasure Island Community Work | ESBE Incorporated</title>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"ESBE Incorporated","url":"https://esbeincorporated.org/","taxID":"87-1218291","email":"help@esbeincorporated.org","sameAs":["${determinationLetter}"]}<\/script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="ESBE Incorporated home">ESBE <span>INC.</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="/#mission">Mission</a><a href="/#programs">Programs</a><a href="/community" aria-current="page">Community</a><a href="/donate">Donate</a><a href="/#transparency">Transparency</a><a href="/#contact">Contact</a>
+      </nav>
+      <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">Visit AIVA Claims <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="community-title">
+        <p class="eyebrow">COMMUNITY • TREASURE ISLAND • PUBLIC INFRASTRUCTURE</p>
+        <div class="hero-grid">
+          <h1 id="community-title">Dependable power is a community issue on Treasure Island.</h1>
+          <div class="hero-copy">
+            <p>ESBE Incorporated supports public documentation and accountability work for Treasure Island residents. The goal is practical: make outage information easier to find, understand, and act on for the people who live on the island.</p>
+            <div class="hero-actions"><a class="button primary" href="https://www.treasureislandsfpoweroutages.com" rel="noreferrer">Visit Treasure Island Power <span aria-hidden="true">↗</span></a><a class="text-link" href="#resident-paths">Resident resources <span aria-hidden="true">↓</span></a></div>
+          </div>
+        </div>
+        <div class="hero-rule" aria-hidden="true"></div>
+        <p class="hero-note">ESBE Incorporated is an independent nonprofit. It is not a government agency and does not speak for the City and County of San Francisco, the San Francisco Public Utilities Commission, or the Treasure Island Development Authority.</p>
+      </section>
+
+      <section class="statement" id="why" aria-labelledby="why-title">
+        <div><p class="section-mark">01</p><a class="permalink" href="#why" aria-label="Copy link to why this work matters">#</a></div>
+        <div><p class="eyebrow">WHY IT MATTERS</p><h2 id="why-title">An island community feels every outage.</h2></div>
+        <p class="body-large">When the power fails, households, small businesses, and neighbors who rely on electricity are affected together. A clear public record of what happened, and a clear path to the right official channel, helps residents ask for reliable service with facts in hand.</p>
+      </section>
+
+      <section class="programs" id="resident-paths" aria-labelledby="paths-title">
+        <div class="section-heading"><div><p class="section-mark">02</p><a class="permalink" href="#resident-paths" aria-label="Copy link to resident resources">#</a></div><div><p class="eyebrow">COMMUNITY RESOURCES</p><h2 id="paths-title">Where Treasure Island residents can start.</h2></div></div>
+        <section class="civic-projects" aria-labelledby="ti-projects-title">
+          <div class="civic-projects-heading"><div><p class="program-kicker">PUBLIC INFRASTRUCTURE</p><h3 id="ti-projects-title">Treasure Island Power.</h3></div><p>A public outage tracker documenting Treasure Island power failures and related accountability work. Its records are community-compiled and are not a live power feed. It is an independent public project and is not affiliated with SFPUC or TIDA.</p></div>
+          <div class="civic-project-grid">
+            <article class="civic-project"><p class="civic-project-meta">OUTAGE TRACKER \xB7 LIVE</p><h4>Treasure Island Power</h4><p>The public record of outages and related accountability work for Treasure Island.</p><a href="https://www.treasureislandsfpoweroutages.com" rel="noreferrer">Visit Treasure Island Power <span aria-hidden="true">↗</span></a></article>
+            <article class="civic-project"><p class="civic-project-meta">REPORT</p><h4>Report an outage</h4><p>Report a power outage on Treasure Island through Improve Bay Area or San Francisco 311.</p><a href="https://www.treasureislandsfpoweroutages.com/report" rel="noreferrer">Report an outage <span aria-hidden="true">↗</span></a></article>
+            <article class="civic-project"><p class="civic-project-meta">RESIDENTS</p><h4>Resident resources</h4><p>Emergency alerts, claim forms, advocacy tools, and press coverage collected for Treasure Island residents.</p><a href="https://www.treasureislandsfpoweroutages.com/resources" rel="noreferrer">Open resident resources <span aria-hidden="true">↗</span></a></article>
+            <article class="civic-project"><p class="civic-project-meta">PUBLIC RECORDS</p><h4>Record requests</h4><p>Public records requests filed in the Treasure Island and Yerba Buena Island grid investigation.</p><a href="https://www.treasureislandsfpoweroutages.com/records" rel="noreferrer">View record requests <span aria-hidden="true">↗</span></a></article>
+            <article class="civic-project"><p class="civic-project-meta">MAP</p><h4>Infrastructure map</h4><p>An interactive map of Treasure Island grid infrastructure and outage history.</p><a href="https://www.treasureislandsfpoweroutages.com/map" rel="noreferrer">Open the map <span aria-hidden="true">↗</span></a></article>
+          </div>
+        </section>
+        <div class="project-row"><p>For an emergency, call 911</p><a href="/"><span>ESBE Incorporated home</span><span aria-hidden="true">↗</span></a><a href="/donate"><span>Support ESBE's work</span><span aria-hidden="true">↗</span></a></div>
+      </section>
+
+      <section class="transparency" aria-labelledby="community-transparency-title">
+        <div class="section-heading"><div><p class="section-mark">03</p></div><div><p class="eyebrow">TRANSPARENCY</p><h2 id="community-transparency-title">Clear identity. Clear accountability.</h2></div></div>
+        <dl class="facts"><div><dt>Organization</dt><dd>ESBE Incorporated</dd></div><div><dt>Federal tax ID</dt><dd>87-1218291</dd></div><div><dt>Federal status</dt><dd>501(c)(3) nonprofit organization</dd></div><div><dt>Government relationship</dt><dd>Independent nonprofit; not a government agency.</dd></div></dl>
+        <div class="transparency-links"><a href="${determinationLetter}" rel="noreferrer">Read the IRS determination letter <span aria-hidden="true">↗</span></a><a href="mailto:help@esbeincorporated.org?subject=ESBE%20Incorporated%20community%20inquiry">Contact us about this work <span aria-hidden="true">↗</span></a></div>
+      </section>
+    </main>
+    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/">Back to home ↑</a></div></footer>
+    <script type="module" src="/webmcp.js"><\/script>
+    <script type="module" src="/ads.js"><\/script>
+  </body>
+</html>`)
+);
 app.get("/security.txt", (c) => c.redirect("/.well-known/security.txt", 302));
 app.get("*", (c) => c.env.ASSETS.fetch(c.req.raw));
 var index_default = app;

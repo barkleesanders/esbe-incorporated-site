@@ -50,3 +50,20 @@ branch `og-png-fix-2026-10-23`) shares no history with `origin/main`,
 which holds a single 2026-10-06 "7-page rebuild" source commit
 (3f7282b). The branch is kept as the deploy record for the live bundle;
 do not force-merge the two histories.
+
+## 2026-10-24 — /community restored
+
+`/community` ("Treasure Island Community Work | ESBE Incorporated") was live
+2026-10-06 and lost in a later redeploy. No Wayback Machine capture of the path
+exists (CDX API: zero rows for `esbeincorporated.org/community*`), so the copy
+was written fresh from facts already on the site (homepage "Treasure Island
+Power" civic project) plus the outage resource's own pages. No statistics, no
+photo gallery (nothing recoverable).
+
+- Route `/community` added to `index.js`; homepage nav gains "Community";
+  `public/sitemap.xml` gains `/community`.
+- `wrangler.jsonc` now declares `workers_dev: false` / `preview_urls: false`
+  (matches live state; the surface guard requires them).
+- Built on the live baseline (`be532dd`, version 5cc0443b). Deploy as in the
+  2026-10-23 note: staged `--no-bundle`, main `__traks_managed_entry.mjs`
+  with `traks/` parts copied byte-for-byte next to `index.js`.
