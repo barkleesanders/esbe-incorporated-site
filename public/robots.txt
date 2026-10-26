@@ -1,3 +1,25 @@
+# robots.txt for esbeincorporated.org
+# For AI agents: see /llms.txt and /ai.txt. Keep robots.txt, /llms.txt and /ai.txt in sync.
 User-agent: *
 Allow: /
+Disallow: /api/
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
 Sitemap: https://esbeincorporated.org/sitemap.xml
