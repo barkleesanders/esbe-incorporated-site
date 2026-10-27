@@ -33,3 +33,14 @@ test("the CTAs the events describe exist in the bundle", () => {
 test("ads.js is loaded on all three page templates", () => {
   assert.equal((bundle.match(/src="\/ads\.js"/g) || []).length, 3);
 });
+
+test("CSP allows the hosts gtag.js actually collects to", () => {
+  // gtag.js sends GA4 hits by fetch/beacon to analytics.google.com,
+  // www.google.com and stats.g.doubleclick.net (observed live in a
+  // browser console 2026-10-27: every collect was CSP-blocked when
+  // connect-src listed only www.google-analytics.com). The img-src
+  // fallback needs the same hosts.
+  const csp = bundle.match(/connect-src ([^;]+);/)?.[1] ?? "";
+  for (const h of ["https://www.google-analytics.com", "https://region1.google-analytics.com", "https://analytics.google.com", "https://www.google.com", "https://stats.g.doubleclick.net"])
+    assert.ok(csp.includes(h), `connect-src missing ${h}`);
+});
