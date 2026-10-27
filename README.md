@@ -89,3 +89,17 @@ Conversions bidder.
 - Coverage pinned by `tests/ga4-events.test.mjs` (`node --test`).
 - Rollback: redeploy the previous Worker version at 100% (recorded in the
   deploy report for this change).
+
+## 2026-10-27 — CSP was blocking every GA4 collect (follow-up to the events fix)
+
+Browser-console evidence (clean Chrome profile, live site): gtag.js tried
+to POST each hit to `analytics.google.com/g/collect`,
+`www.google.com/g/collect` and `stats.g.doubleclick.net/g/collect`, and
+every attempt failed with a CSP connect-src violation — the policy only
+allowed `www.google-analytics.com`. That is why the property's whole
+history held 7 page views (image-beacon fallbacks) and no custom events.
+Fix: connect-src and img-src gain `region1.google-analytics.com`,
+`analytics.google.com`, `www.google.com` and `stats.g.doubleclick.net`
+(img-src also `www.googletagmanager.com`), pinned by a test in
+`tests/ga4-events.test.mjs`. Rollback: redeploy the previous Worker
+version at 100%.

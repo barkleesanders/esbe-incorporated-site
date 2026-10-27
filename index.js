@@ -2121,7 +2121,7 @@ app.use("*", async (c, next) => {
   await next();
   c.header(
     "Content-Security-Policy",
-    "default-src 'self'; base-uri 'self'; connect-src 'self' https://cloudflareinsights.com https://www.google-analytics.com; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none'; img-src 'self' data: https://www.google-analytics.com; object-src 'none'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; upgrade-insecure-requests",
+    "default-src 'self'; base-uri 'self'; connect-src 'self' https://cloudflareinsights.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.google.com https://stats.g.doubleclick.net; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none'; img-src 'self' data: https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com; object-src 'none'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; upgrade-insecure-requests",
     { append: true }
   );
   c.header("Referrer-Policy", "strict-origin-when-cross-origin");
