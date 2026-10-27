@@ -3509,6 +3509,14 @@ app.get(
   (c) => c.html(`<!doctype html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) - GA4 ESBE Incorporated -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLVSKGE4LT"><\/script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YLVSKGE4LT');
+    <\/script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="ESBE Incorporated's community work on Treasure Island: public documentation of power outages and plain-language paths to official reporting channels for residents." />

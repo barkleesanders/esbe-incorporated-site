@@ -67,3 +67,25 @@ photo gallery (nothing recoverable).
 - Built on the live baseline (`be532dd`, version 5cc0443b). Deploy as in the
   2026-10-23 note: staged `--no-bundle`, main `__traks_managed_entry.mjs`
   with `traks/` parts copied byte-for-byte next to `index.js`.
+
+## 2026-10-27 — GA4 conversion events actually fire
+
+GA4 property 559498667 (tag G-YLVSKGE4LT) had recorded only page_view /
+first_visit / session_start in its entire history (7 page views, verified
+via the GA4 Data API on 2026-10-27): the custom events Google Ads imports
+as conversions — `aiva_signup_click` (7855556310) and `donate_click`
+(7855556313) in account 681-385-8588 — were defined in GA4/Ads but fired
+nowhere in either this site or aivaclaims.com (whose own GA4 was removed
+2026-05-04 in favour of self-hosted Traks), starving the Maximize
+Conversions bidder.
+
+- `public/ads.js` (loaded on /, /donate and /community) gains one delegated
+  click listener: AIVA sign-up CTAs (`aivaclaims.com/sign-up`) fire
+  `aiva_signup_click`; Every.org donate links and same-site `/donate`
+  links fire `donate_click`. Params: `link_url`, `page_path`.
+- `/community`'s template had no GA4 tag at all; it now carries the same
+  gtag snippet as home and /donate (bundle total: 6 measurement-ID
+  occurrences, 3 gtag/js loads).
+- Coverage pinned by `tests/ga4-events.test.mjs` (`node --test`).
+- Rollback: redeploy the previous Worker version at 100% (recorded in the
+  deploy report for this change).
