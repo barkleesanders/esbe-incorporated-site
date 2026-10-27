@@ -17,8 +17,35 @@ idx_path = root / "index.js"
 src = idx_path.read_text()
 ai = (root / "ai-readable.js").read_text()
 
+def inline_source(text):
+    # Strip ESM export keywords for inlining into the bundle module scope.
+    lines = []
+    for line in text.splitlines():
+        if line.startswith("export "):
+            line = line[len("export "):]
+        lines.append(line)
+    return "\n".join(lines)
+
+if "--refresh" in sys.argv:
+    # Regeneration mode: the bundle is already patched, and ai-readable.js
+    # has changed (e.g. the MCP registry lines). Replace ONLY the block
+    # between the AI-READABLE markers with the freshly inlined source, using
+    # the exact transform above; everything outside the markers is asserted
+    # untouched by construction (prefix/suffix are carried over verbatim).
+    begin_marker = "/* === AI-READABLE BEGIN (generated from ai-readable.js by patch_ai_readable.py) === */"
+    end_marker = "/* === AI-READABLE END === */"
+    assert src.count(begin_marker) == 1, "refresh: expected exactly one BEGIN marker"
+    assert src.count(end_marker) == 1, "refresh: expected exactly one END marker"
+    b = src.index(begin_marker) + len(begin_marker)
+    e = src.index(end_marker)
+    assert b < e, "refresh: markers out of order"
+    refreshed = src[:b] + "\n" + inline_source(ai) + "\n" + src[e:]
+    idx_path.write_text(refreshed)
+    print(f"refreshed ai-readable block in index.js: {len(refreshed)} bytes")
+    sys.exit(0)
+
 if "AI-READABLE BEGIN" in src:
-    sys.exit("already patched: AI-READABLE markers present")
+    sys.exit("already patched: AI-READABLE markers present (use --refresh to regenerate the block from ai-readable.js)")
 
 def must_replace(text, old, new, count=1):
     found = text.count(old)

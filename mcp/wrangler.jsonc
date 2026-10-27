@@ -1,0 +1,50 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "esbe-mcp",
+  "main": "worker.ts",
+  // Same date as AIVA's muse-connector: proven with the pinned wrangler /
+  // workerd line this repo installs. Bump together with wrangler.
+  "compatibility_date": "2026-09-18",
+  "workers_dev": false,
+  // Zone routes MORE SPECIFIC than the site Worker's catch-all win, exactly
+  // as aivaclaims.com/mcp* does for AIVA's muse-connector. So /mcp, /mcp/ and
+  // /mcp/health are answered here and never reach the recovered site bundle
+  // (which would return HTML to an MCP client expecting JSON-RPC).
+  //
+  // DEVIATION (design §3, sanctioned): the second route makes THIS Worker —
+  // not the site Worker — serve the discovery file at
+  // /.well-known/mcp.json, because the only alternative is surgery on the
+  // recovered bundle to save a distinction no client can observe.
+  "routes": [
+    {
+      "pattern": "esbeincorporated.org/mcp*",
+      "zone_name": "esbeincorporated.org"
+    },
+    {
+      "pattern": "esbeincorporated.org/.well-known/mcp.json",
+      "zone_name": "esbeincorporated.org"
+    }
+  ],
+  "ratelimits": [
+    {
+      "name": "MCP_RATE_LIMITER",
+      // Rate-limit namespaces are account-wide: two Workers sharing one
+      // namespace_id share one counter per key. AIVA's muse-connector owns
+      // 2026091901 and benefits-finder owns 2026081901 — NEVER reuse either.
+      // This Worker minted 2026102601 (convention: YYYYMMDDnn of the day the
+      // binding was created), keeping its budget independent.
+      "namespace_id": "2026102601",
+      // 60/min per CF-Connecting-IP. An MCP session is ~3 requests to start
+      // (initialize, notifications/initialized, tools/list) plus one per tool
+      // call, so this is ample for an assistant and cheap for a scraper.
+      // ceiling: Cloudflare's rate-limit binding period must be 10 or 60.
+      "simple": {
+        "limit": 60,
+        "period": 60
+      }
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
