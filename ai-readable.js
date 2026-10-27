@@ -355,6 +355,8 @@ export function buildLlms() {
     `- [Markdown catalog](${SITE.url}/api/md/_catalog)`,
     `- [Sitemap](${SITE.url}/sitemap.xml)`,
     `- [AI usage policy](${SITE.url}/ai.txt)`,
+    `- [MCP server](${SITE.url}/mcp): public, read-only Model Context Protocol server — organization and transparency facts, programs, donation information, community work, and contact details as structured tools`,
+    `- [MCP discovery](${SITE.url}/.well-known/mcp.json): discovery document for the MCP server`,
     ""
   );
   return lines.join("\n");
@@ -403,7 +405,7 @@ export function buildAiTxt(now = new Date()) {
     `cite as: ${SITE.name} + the canonical HTML URL of the page used`,
     "",
     "[scope]",
-    `included: /, /donate, /community, and their .md versions, /llms.txt, /llms-full.txt`,
+    `included: /, /donate, /community, and their .md versions, /llms.txt, /llms-full.txt, /mcp, /.well-known/mcp.json`,
     "excluded: /api/ (machine endpoints; the markdown catalog at /api/md/_catalog is linked from /llms.txt for direct agent requests)",
     "note: this site has no admin, dashboard or auth pages",
     "",
