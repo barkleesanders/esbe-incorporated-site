@@ -37,9 +37,13 @@
       // Rate-limit namespaces are account-wide: two Workers sharing one
       // namespace_id share one counter per key. AIVA's muse-connector owns
       // 2026091901 and benefits-finder owns 2026081901 — NEVER reuse either.
-      // This Worker minted 2026102601 (convention: YYYYMMDDnn of the day the
-      // binding was created), keeping its budget independent.
-      "namespace_id": "2026102601",
+      // This Worker originally minted 2026102601 (convention: YYYYMMDDnn of
+      // the day the binding was created), but barkleesanders-mcp minted the
+      // same id the same day - an account-wide namespace collision that made
+      // the two Workers share one counter. Renumbered 2026-10-26 to
+      // 2026102602 so this Worker again has a dedicated namespace (fleet
+      // contract, design 0.4), keeping its budget independent.
+      "namespace_id": "2026102602",
       // 60/min per CF-Connecting-IP. An MCP session is ~3 requests to start
       // (initialize, notifications/initialized, tools/list) plus one per tool
       // call, so this is ample for an assistant and cheap for a scraper.
