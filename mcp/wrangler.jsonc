@@ -11,6 +11,12 @@
   // /mcp/health are answered here and never reach the recovered site bundle
   // (which would return HTML to an MCP client expecting JSON-RPC).
   //
+  // NOTE (ship fix, 2026-10-26): the discovery pattern carries a trailing *
+  // because a wildcard-less route pattern LOSES to the site Worker's Custom
+  // Domain attachment on the same hostname (measured live: the exact pattern
+  // deployed cleanly but the site bundle answered 404; adding * - the same
+  // shape as /mcp* - made esbe-mcp win). The Worker itself still only serves
+  // this one path and 404s everything else.
   // DEVIATION (design §3, sanctioned): the second route makes THIS Worker —
   // not the site Worker — serve the discovery file at
   // /.well-known/mcp.json, because the only alternative is surgery on the
@@ -21,7 +27,7 @@
       "zone_name": "esbeincorporated.org"
     },
     {
-      "pattern": "esbeincorporated.org/.well-known/mcp.json",
+      "pattern": "esbeincorporated.org/.well-known/mcp.json*",
       "zone_name": "esbeincorporated.org"
     }
   ],
