@@ -20,3 +20,37 @@ for (const link of document.querySelectorAll('a[data-carry-params]')) {
   }
   link.href = url.toString();
 }
+
+// GA4 conversion events for Google Ads (GA4 property 559498667, measurement
+// ID G-YLVSKGE4LT, imported into Ads account 681-385-8588 as conversion
+// actions 7855556310 and 7855556313). The gtag.js snippet itself lives in
+// each page's <head> in index.js and only ever sent page_view; these two
+// custom events were defined in GA4/Ads but never fired anywhere, which
+// starved the Maximize Conversions bidder. Event names are exact and
+// case-sensitive: GA4/Ads match on this string. One delegated listener
+// covers every page because /ads.js loads on /, /donate and /community.
+//   aiva_signup_click — a click on any AIVA sign-up CTA
+//     (aivaclaims.com/sign-up: the header CTA and the AIVA program card).
+//   donate_click — a click on a donation CTA: an outbound Every.org
+//     donate link, or a same-site link to /donate (nav, footer, cards).
+document.addEventListener('click', (event) => {
+  if (typeof window.gtag !== 'function') return;
+  const link = event.target instanceof Element ? event.target.closest('a[href]') : null;
+  if (!link) return;
+  let url;
+  try {
+    url = new URL(link.href);
+  } catch {
+    return;
+  }
+  const params = { link_url: url.href, page_path: window.location.pathname };
+  if (url.hostname === 'aivaclaims.com' && url.pathname.startsWith('/sign-up')) {
+    window.gtag('event', 'aiva_signup_click', params);
+  } else if (
+    url.hostname === 'every.org' ||
+    url.hostname === 'www.every.org' ||
+    (url.hostname === window.location.hostname && url.pathname === '/donate')
+  ) {
+    window.gtag('event', 'donate_click', params);
+  }
+});
