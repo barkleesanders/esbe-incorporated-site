@@ -44,15 +44,46 @@ document.addEventListener('click', (event) => {
     return;
   }
   const params = { link_url: url.href, page_path: window.location.pathname };
+  let gaEvent = null;
+  let sendTo = null;
   if (url.hostname === 'aivaclaims.com' && url.pathname.startsWith('/sign-up')) {
-    window.gtag('event', 'aiva_signup_click', params);
-    window.gtag('event', 'conversion', { send_to: 'AW-18515418870/gV58CKnooq8dEPa96_xE', transport_type: 'beacon' });
+    gaEvent = 'aiva_signup_click';
+    sendTo = 'AW-18515418870/gV58CKnooq8dEPa96_xE';
   } else if (
     url.hostname === 'every.org' ||
     url.hostname === 'www.every.org' ||
     (url.hostname === window.location.hostname && url.pathname === '/donate')
   ) {
-    window.gtag('event', 'donate_click', params);
-    window.gtag('event', 'conversion', { send_to: 'AW-18515418870/bKn5CKzooq8dEPa96_xE', transport_type: 'beacon' });
+    gaEvent = 'donate_click';
+    sendTo = 'AW-18515418870/bKn5CKzooq8dEPa96_xE';
   }
+  if (!gaEvent) return;
+  window.gtag('event', gaEvent, params);
+  // gtag dispatches asynchronously: on a click that navigates right away,
+  // the page can unload before the conversion is sent (verified live
+  // 2026-10-30 — beacon transport alone did not survive it). For a plain
+  // left click, hold the navigation until the conversion callback fires
+  // (Google's gtag_report_conversion pattern) with a 1s fallback timer
+  // so a click is never swallowed.
+  const plainClick =
+    event.button === 0 && !event.metaKey && !event.ctrlKey &&
+    !event.shiftKey && !event.altKey && link.target !== '_blank';
+  if (!plainClick) {
+    window.gtag('event', 'conversion', { send_to: sendTo, transport_type: 'beacon' });
+    return;
+  }
+  event.preventDefault();
+  let navigated = false;
+  const navigate = () => {
+    if (navigated) return;
+    navigated = true;
+    window.location.href = url.href;
+  };
+  setTimeout(navigate, 1000);
+  window.gtag('event', 'conversion', {
+    send_to: sendTo,
+    transport_type: 'beacon',
+    event_callback: navigate,
+    event_timeout: 1000,
+  });
 });
