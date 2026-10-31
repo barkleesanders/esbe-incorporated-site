@@ -46,13 +46,13 @@ document.addEventListener('click', (event) => {
   const params = { link_url: url.href, page_path: window.location.pathname };
   if (url.hostname === 'aivaclaims.com' && url.pathname.startsWith('/sign-up')) {
     window.gtag('event', 'aiva_signup_click', params);
-    window.gtag('event', 'conversion', { send_to: 'AW-18515418870/gV58CKnooq8dEPa96_xE' });
+    window.gtag('event', 'conversion', { send_to: 'AW-18515418870/gV58CKnooq8dEPa96_xE', transport_type: 'beacon' });
   } else if (
     url.hostname === 'every.org' ||
     url.hostname === 'www.every.org' ||
     (url.hostname === window.location.hostname && url.pathname === '/donate')
   ) {
     window.gtag('event', 'donate_click', params);
-    window.gtag('event', 'conversion', { send_to: 'AW-18515418870/bKn5CKzooq8dEPa96_xE' });
+    window.gtag('event', 'conversion', { send_to: 'AW-18515418870/bKn5CKzooq8dEPa96_xE', transport_type: 'beacon' });
   }
 });
