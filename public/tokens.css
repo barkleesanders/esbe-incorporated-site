@@ -1,0 +1,18 @@
+:root {
+  --color-paper: oklch(0.97 0.012 115);
+  --color-ink: oklch(0.21 0.03 150);
+  --color-accent: oklch(0.39 0.09 155);
+  --color-muted: oklch(0.48 0.025 145);
+  --color-line: oklch(0.8 0.025 125);
+  --color-focus: oklch(0.55 0.15 130);
+  --font-display: "Newsreader", Georgia, serif;
+  --font-body: "Newsreader", Georgia, serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
