@@ -91,12 +91,24 @@ its Every.org handoff, never through a tool.
 
 ## Chrome origin trial
 
-**Not enrolled.** No origin-trial token is embedded in the served pages
-yet; fleet enrollment is tracked separately (the tools work today in
-WebMCP-native browsers such as ChatGPT's built-in browser; stock Chrome
-exposes them once the origin is enrolled or WebMCP ships in Chrome).
-When enrollment happens, record the token expiry here and embed the
-token on both origins (apex + www).
+**Enrolled** (2026-11-03). Registration:
+
+- Portal: Chrome Origin Trials, feature **WebMCP**
+- Origin: `https://esbeincorporated.org`
+- Registration id: `2832042885988220929`
+- Chrome range: 149-162
+- Expiry: 2027-03-29 per the portal (token payload `expiry` = 1806364800)
+
+The token is embedded as the first element of `<head>` on all 5 pages
+(/, /donate, /community, /privacy, /terms) by `patch_ot.py` — the
+deterministic, assertion-guarded sibling of `patch_webmcp.py`, defined
+against the shipped (post-WebMCP) bundle: its output is that bundle
+plus exactly the 5 meta insertions (+1,260 chars), proven by diff
+before deploy. The token's signed payload (origin + feature +
+expiry) is asserted inside `patch_ot.py`, so a wrong token refuses
+to patch. The www host is served by the same Worker with identical
+pages, so the meta ships there too, but the registration's signed
+origin is the apex origin above.
 
 ## Known drift (baseline adoption fallout — not caused by WebMCP)
 
