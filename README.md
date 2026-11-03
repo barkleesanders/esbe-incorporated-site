@@ -51,6 +51,17 @@ which holds a single 2026-10-06 "7-page rebuild" source commit
 (3f7282b). The branch is kept as the deploy record for the live bundle;
 do not force-merge the two histories.
 
+Lineage note (2026-11-03) — supersedes the 2026-10-23 note above: on
+2026-11-03 Barklee Sanders explicitly overrode the do-not-force-merge
+instruction. The two histories were joined into `main` with a
+`git merge -s ours --allow-unrelated-histories` of the old `main`
+(3f7282b) into the live bundle lineage tip
+(`feat/ads-conversion-tag-2026-10-30`, d576928). The join is
+tree-neutral — the resulting tree is identical to the bundle lineage
+tip — and no code was deployed; production already ran this tree.
+`main` once again tracks the live bundle lineage. The 2026-10-23 note
+above is retained as superseded history.
+
 ## 2026-10-24 — /community restored
 
 `/community` ("Treasure Island Community Work | ESBE Incorporated") was live
