@@ -114,3 +114,23 @@ Fix: connect-src and img-src gain `region1.google-analytics.com`,
 (img-src also `www.googletagmanager.com`), pinned by a test in
 `tests/ga4-events.test.mjs`. Rollback: redeploy the previous Worker
 version at 100%.
+
+## 2026-11-03 — live-bytes baseline (version 448bc7ec)
+
+Production was re-bundled after the 2026-10-30 ads-tag deploy. The version
+live at recovery time — version `448bc7ec-469e-4d06-943b-8f2a6969accb`
+(#34, uploaded via the Cloudflare API and deployed 2026-10-31T06:18:04Z at
+100% by deployment `84eeec1b-161f-4024-8aa1-1398d67b3abe`; it superseded
+version d623780c the same night) — carries an `index.js` of 218,597 bytes
+(sha256 `3853fef721def2a2bc95298c976cacb3fc09d6691ce5971e6132cdecb164fa9b`)
+that matches no commit in this repo: the repo tip's `index.js` is the
+earlier 190,777-byte build (sha256 f07e3a01...). The Traks parts
+(`__traks_managed_entry.mjs`, `__traks_wrapper.mjs`) and every static asset
+were verified byte-identical to the repo copies; `index.js` is the only
+divergence.
+
+This baseline adopts the recovered live `index.js` bytes, per this repo's
+2026-10-15 / 2026-10-23 recovery precedent, so the WebMCP ship that follows
+patches the bytes production actually runs — including the `/privacy` and
+`/terms` Worker routes, which exist only in this build. No code changes in
+this baseline; nothing was deployed.
