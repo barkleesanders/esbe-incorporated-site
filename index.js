@@ -2862,6 +2862,7 @@ app.get(
       </section>
     </main>
     <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="#mission">Back to top \u2191</a></div></footer>
+    <script type="module" src="/webmcp-tools.js"><\/script>
     <script type="module" src="/webmcp.js"><\/script>
     <script type="module" src="/ads.js"><\/script>
   </body>
@@ -2954,6 +2955,7 @@ app.get(
       </section>
     </main>
     <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
+    <script type="module" src="/webmcp-tools.js"><\/script>
     <script type="module" src="/webmcp.js"><\/script>
     <script type="module" src="/ads.js"><\/script>
   </body>
@@ -3053,6 +3055,7 @@ app.get(
       </section>
     </main>
     <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
+    <script type="module" src="/webmcp-tools.js"><\/script>
     <script type="module" src="/webmcp.js"><\/script>
     <script type="module" src="/ads.js"><\/script>
   </body>
@@ -3125,6 +3128,7 @@ app.get(
       <section class="statement" aria-labelledby="privacy-s5"><div><p class="section-mark">05</p></div><div><h2 id="privacy-s5">Contact and changes</h2><p>Questions about this policy: help@esbeincorporated.org or (802) 715-3723. If this policy changes, the updated version will be posted at this URL with a new Last updated date.</p></div></section>
     </main>
     <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
+    <script type="module" src="/webmcp-tools.js"><\/script>
     <script type="module" src="/webmcp.js"><\/script>
     <script type="module" src="/ads.js"><\/script>
   </body>
@@ -3198,6 +3202,7 @@ app.get(
       <section class="statement" aria-labelledby="terms-s6"><div><p class="section-mark">06</p></div><div><h2 id="terms-s6">Changes and contact</h2><p>If these terms change, the updated version will be posted at this URL with a new Last updated date. Questions: help@esbeincorporated.org or (802) 715-3723.</p></div></section>
     </main>
     <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
+    <script type="module" src="/webmcp-tools.js"><\/script>
     <script type="module" src="/webmcp.js"><\/script>
     <script type="module" src="/ads.js"><\/script>
   </body>
@@ -3302,6 +3307,27 @@ const ICON_PNG_BYTES = Uint8Array.from(atob(
 ), (ch) => ch.charCodeAt(0));
 app.get("/icon-512.png", (c) => c.body(ICON_PNG_BYTES, 200, { "Content-Type": "image/png", "Cache-Control": "public, max-age=31536000, immutable" }));
 app.get("/security.txt", (c) => c.redirect("/.well-known/security.txt", 302));
+// ----- WebMCP usage beacon (added by patch_webmcp.py; see WEBMCP.md) -----
+// POST /api/webmcp-beacon: anonymous register/execute pings from the page's
+// WebMCP registrar. Whitelisted fields only, argument KEY names never
+// values, always 204 — the beacon never fails the page.
+app.post("/api/webmcp-beacon", async (c) => {
+  try {
+    const rawBody = await c.req.text();
+    if (rawBody.length <= 2048 && c.env.WEBMCP_DB) {
+      const data = JSON.parse(rawBody);
+      const event = data.event;
+      if (event === "register" || event === "execute") {
+        const capStr = (v, n) => (typeof v === "string" ? v.slice(0, n) : null);
+        const capList = (v, items, n) => Array.isArray(v) ? v.filter((x) => typeof x === "string").slice(0, items).map((x) => x.slice(0, n)) : [];
+        await c.env.WEBMCP_DB.prepare("INSERT INTO webmcp_events (ts, event, tool, tools, arg_keys, path, user_agent) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7)").bind(new Date().toISOString(), event, event === "execute" ? capStr(data.tool, 128) : null, event === "register" ? JSON.stringify(capList(data.tools, 32, 128)) : null, event === "execute" ? JSON.stringify(capList(data.argKeys, 16, 64)) : null, capStr(data.path, 256), capStr(c.req.header("user-agent"), 256)).run();
+      }
+    }
+  } catch (e) {
+    // Dropped silently by design — the beacon never fails the page.
+  }
+  return c.body(null, 204);
+});
 app.get("*", (c) => c.env.ASSETS.fetch(c.req.raw));
 var index_default = app;
 export {
