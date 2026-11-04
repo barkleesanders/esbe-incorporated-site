@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "name": "ESBE Incorporated",
+  "origin": "https://esbeincorporated.org",
+  "description": "ESBE Incorporated is a 501(c)(3) nonprofit advancing veteran support and public-interest access to government-facing services.",
+  "webmcp": {
+    "feature": "WebMCP",
+    "api": "document.modelContext",
+    "originTrialExpiry": "2027-03-29"
+  },
+  "tools": [
+    {
+      "name": "get_page_guide",
+      "description": "List ESBE Incorporated's public pages (home, donate, community, privacy, terms) with each page's title, description, URL, and last-updated date, from the site's own page catalog.",
+      "class": "answer",
+      "inputSchema": { "type": "object", "properties": {}, "additionalProperties": false }
+    },
+    {
+      "name": "search_site",
+      "description": "Search the full text of ESBE Incorporated's public pages (home, donate, community, privacy, terms) and return matching excerpts with the page each came from.",
+      "class": "answer",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string", "description": "Search terms; every term must appear on a matching page" },
+          "limit": { "type": "number", "description": "Maximum excerpts to return (1-10, default 5)" }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "get_page",
+      "description": "Read one of ESBE Incorporated's public pages as markdown: /, /donate, /community, /privacy, or /terms. Returns the same markdown the site serves to agents at its .md URLs.",
+      "class": "answer",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string", "description": "Page path: /, /donate, /community, /privacy, or /terms" }
+        },
+        "required": ["path"]
+      }
+    },
+    {
+      "name": "navigate_to_page",
+      "description": "Navigate the visitor's browser to one of ESBE Incorporated's public pages: home (/), donate (/donate), community (/community), privacy (/privacy), or terms (/terms). Only these internal paths are used.",
+      "class": "action",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "page": { "type": "string", "description": "Page key or path: home, donate, community, privacy, terms — or the exact path like /donate" }
+        },
+        "required": ["page"]
+      }
+    }
+  ],
+  "docs": "/llms.txt"
+}

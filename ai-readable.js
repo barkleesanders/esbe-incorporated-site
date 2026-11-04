@@ -359,6 +359,17 @@ export function buildLlms() {
     `- [MCP discovery](${SITE.url}/.well-known/mcp.json): discovery document for the MCP server`,
     ""
   );
+  lines.push(
+    "## WebMCP tools",
+    "",
+    "This site registers WebMCP tools in the browser via document.modelContext. Agents that support WebMCP: prefer these tools over scraping HTML. Tool catalogue (JSON): /.well-known/webmcp.json",
+    "",
+    "- `get_page_guide` — List ESBE Incorporated's public pages (home, donate, community, privacy, terms) with each page's title, description, URL, and last-updated date, from the site's own page catalog.",
+    "- `search_site` — Search the full text of ESBE Incorporated's public pages (home, donate, community, privacy, terms) and return matching excerpts with the page each came from.",
+    "- `get_page` — Read one of ESBE Incorporated's public pages as markdown: /, /donate, /community, /privacy, or /terms. Returns the same markdown the site serves to agents at its .md URLs.",
+    "- `navigate_to_page` — Navigate the visitor's browser to one of ESBE Incorporated's public pages: home (/), donate (/donate), community (/community), privacy (/privacy), or terms (/terms). Only these internal paths are used.",
+    "",
+  );
   return lines.join("\n");
 }
 
@@ -431,6 +442,12 @@ export function buildRobots() {
   ];
   for (const b of bots) lines.push(`User-agent: ${b}`, "Allow: /", "");
   lines.push(`Sitemap: ${SITE.url}/sitemap.xml`, "");
+  lines.push(
+    "# WebMCP: this site offers in-browser agent tools via document.modelContext.",
+    "# Agents that support WebMCP: prefer the registered tools over scraping HTML.",
+    "# Tool catalogue: /.well-known/webmcp.json - Site guide: /llms.txt",
+    "",
+  );
   return lines.join("\n");
 }
 
