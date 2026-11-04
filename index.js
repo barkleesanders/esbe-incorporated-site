@@ -2608,6 +2608,17 @@ function buildLlms() {
     `- [MCP discovery](${SITE.url}/.well-known/mcp.json): discovery document for the MCP server`,
     ""
   );
+  lines.push(
+    "## WebMCP tools",
+    "",
+    "This site registers WebMCP tools in the browser via document.modelContext. Agents that support WebMCP: prefer these tools over scraping HTML. Tool catalogue (JSON): /.well-known/webmcp.json",
+    "",
+    "- `get_page_guide` \u2014 List ESBE Incorporated's public pages (home, donate, community, privacy, terms) with each page's title, description, URL, and last-updated date, from the site's own page catalog.",
+    "- `search_site` \u2014 Search the full text of ESBE Incorporated's public pages (home, donate, community, privacy, terms) and return matching excerpts with the page each came from.",
+    "- `get_page` \u2014 Read one of ESBE Incorporated's public pages as markdown: /, /donate, /community, /privacy, or /terms. Returns the same markdown the site serves to agents at its .md URLs.",
+    "- `navigate_to_page` \u2014 Navigate the visitor's browser to one of ESBE Incorporated's public pages: home (/), donate (/donate), community (/community), privacy (/privacy), or terms (/terms). Only these internal paths are used.",
+    ""
+  );
   return lines.join("\n");
 }
 __name(buildLlms, "buildLlms");
@@ -2675,6 +2686,12 @@ function buildRobots() {
   ];
   for (const b of bots) lines.push(`User-agent: ${b}`, "Allow: /", "");
   lines.push(`Sitemap: ${SITE.url}/sitemap.xml`, "");
+  lines.push(
+    "# WebMCP: this site offers in-browser agent tools via document.modelContext.",
+    "# Agents that support WebMCP: prefer the registered tools over scraping HTML.",
+    "# Tool catalogue: /.well-known/webmcp.json - Site guide: /llms.txt",
+    ""
+  );
   return lines.join("\n");
 }
 __name(buildRobots, "buildRobots");
@@ -2753,6 +2770,7 @@ app.get(
 <html lang="en">
   <head>
     <meta http-equiv="origin-trial" content="Ao5nDCDm2tvUfzXnC/aV33kcMX+6hDKLhD8R9Ct87pY2EtvcO9hXQne2NtkkFZM/hEeii6M4k7HWt+62WnZoCw8AAABUeyJvcmlnaW4iOiJodHRwczovL2VzYmVpbmNvcnBvcmF0ZWQub3JnOjQ0MyIsImZlYXR1cmUiOiJXZWJNQ1AiLCJleHBpcnkiOjE4MDYzNjQ4MDB9">
+    <link rel="webmcp" href="/.well-known/webmcp.json" type="application/json">
     <!-- Google tag (gtag.js) - GA4 ESBE Incorporated -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLVSKGE4LT"><\/script>
     <script>
@@ -2875,6 +2893,7 @@ app.get(
 <html lang="en">
   <head>
     <meta http-equiv="origin-trial" content="Ao5nDCDm2tvUfzXnC/aV33kcMX+6hDKLhD8R9Ct87pY2EtvcO9hXQne2NtkkFZM/hEeii6M4k7HWt+62WnZoCw8AAABUeyJvcmlnaW4iOiJodHRwczovL2VzYmVpbmNvcnBvcmF0ZWQub3JnOjQ0MyIsImZlYXR1cmUiOiJXZWJNQ1AiLCJleHBpcnkiOjE4MDYzNjQ4MDB9">
+    <link rel="webmcp" href="/.well-known/webmcp.json" type="application/json">
     <!-- Google tag (gtag.js) - GA4 ESBE Incorporated -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLVSKGE4LT"><\/script>
     <script>
@@ -2973,6 +2992,7 @@ app.get(
 <html lang="en">
   <head>
     <meta http-equiv="origin-trial" content="Ao5nDCDm2tvUfzXnC/aV33kcMX+6hDKLhD8R9Ct87pY2EtvcO9hXQne2NtkkFZM/hEeii6M4k7HWt+62WnZoCw8AAABUeyJvcmlnaW4iOiJodHRwczovL2VzYmVpbmNvcnBvcmF0ZWQub3JnOjQ0MyIsImZlYXR1cmUiOiJXZWJNQ1AiLCJleHBpcnkiOjE4MDYzNjQ4MDB9">
+    <link rel="webmcp" href="/.well-known/webmcp.json" type="application/json">
     <!-- Google tag (gtag.js) - GA4 ESBE Incorporated -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLVSKGE4LT"><\/script>
     <script>
@@ -3070,6 +3090,7 @@ app.get(
 <html lang="en">
   <head>
     <meta http-equiv="origin-trial" content="Ao5nDCDm2tvUfzXnC/aV33kcMX+6hDKLhD8R9Ct87pY2EtvcO9hXQne2NtkkFZM/hEeii6M4k7HWt+62WnZoCw8AAABUeyJvcmlnaW4iOiJodHRwczovL2VzYmVpbmNvcnBvcmF0ZWQub3JnOjQ0MyIsImZlYXR1cmUiOiJXZWJNQ1AiLCJleHBpcnkiOjE4MDYzNjQ4MDB9">
+    <link rel="webmcp" href="/.well-known/webmcp.json" type="application/json">
     <!-- Google tag (gtag.js) - GA4 ESBE Incorporated -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLVSKGE4LT"><\/script>
     <script>
@@ -3144,6 +3165,7 @@ app.get(
 <html lang="en">
   <head>
     <meta http-equiv="origin-trial" content="Ao5nDCDm2tvUfzXnC/aV33kcMX+6hDKLhD8R9Ct87pY2EtvcO9hXQne2NtkkFZM/hEeii6M4k7HWt+62WnZoCw8AAABUeyJvcmlnaW4iOiJodHRwczovL2VzYmVpbmNvcnBvcmF0ZWQub3JnOjQ0MyIsImZlYXR1cmUiOiJXZWJNQ1AiLCJleHBpcnkiOjE4MDYzNjQ4MDB9">
+    <link rel="webmcp" href="/.well-known/webmcp.json" type="application/json">
     <!-- Google tag (gtag.js) - GA4 ESBE Incorporated -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLVSKGE4LT"><\/script>
     <script>
