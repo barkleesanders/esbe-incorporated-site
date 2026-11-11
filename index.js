@@ -3356,7 +3356,42 @@ app.post("/api/webmcp-beacon", async (c) => {
   return c.body(null, 204);
 });
 app.get("*", (c) => c.env.ASSETS.fetch(c.req.raw));
-var index_default = app;
+var wide_app = app;
+function emitWideEvent(req, status, start, errorName) {
+  const cf = req.cf || {};
+  const event = {
+    event: "http_request",
+    ts: new Date().toISOString(),
+    request_id: req.headers.get("cf-ray") || "",
+    method: req.method,
+    path: new URL(req.url).pathname,
+    status,
+    outcome: status >= 500 ? "error" : status >= 400 ? "client_error" : "ok",
+    duration_ms: Math.round(Date.now() - start),
+    colo: cf.colo || "",
+    country: cf.country || "",
+    user_agent: (req.headers.get("user-agent") || "").slice(0, 128)
+  };
+  if (errorName) event.error = errorName;
+  console.log(JSON.stringify(event));
+}
+var index_default = {
+  async fetch(req, env, ctx) {
+    const start = Date.now();
+    let status = 500;
+    let errorName;
+    try {
+      const res = await wide_app.fetch(req, env, ctx);
+      status = res.status;
+      return res;
+    } catch (err) {
+      errorName = err && err.name ? err.name : "Error";
+      throw err;
+    } finally {
+      emitWideEvent(req, status, start, errorName);
+    }
+  }
+};
 export {
   index_default as default
 };
