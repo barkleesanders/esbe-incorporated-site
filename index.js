@@ -2608,6 +2608,17 @@ function buildLlms() {
     `- [MCP discovery](${SITE.url}/.well-known/mcp.json): discovery document for the MCP server`,
     ""
   );
+  lines.push(
+    "## WebMCP tools",
+    "",
+    "This site registers WebMCP tools in the browser via document.modelContext. Agents that support WebMCP: prefer these tools over scraping HTML. Tool catalogue (JSON): /.well-known/webmcp.json",
+    "",
+    "- `get_page_guide` \u2014 List ESBE Incorporated's public pages (home, donate, community, privacy, terms) with each page's title, description, URL, and last-updated date, from the site's own page catalog.",
+    "- `search_site` \u2014 Search the full text of ESBE Incorporated's public pages (home, donate, community, privacy, terms) and return matching excerpts with the page each came from.",
+    "- `get_page` \u2014 Read one of ESBE Incorporated's public pages as markdown: /, /donate, /community, /privacy, or /terms. Returns the same markdown the site serves to agents at its .md URLs.",
+    "- `navigate_to_page` \u2014 Navigate the visitor's browser to one of ESBE Incorporated's public pages: home (/), donate (/donate), community (/community), privacy (/privacy), or terms (/terms). Only these internal paths are used.",
+    ""
+  );
   return lines.join("\n");
 }
 __name(buildLlms, "buildLlms");
@@ -2675,6 +2686,12 @@ function buildRobots() {
   ];
   for (const b of bots) lines.push(`User-agent: ${b}`, "Allow: /", "");
   lines.push(`Sitemap: ${SITE.url}/sitemap.xml`, "");
+  lines.push(
+    "# WebMCP: this site offers in-browser agent tools via document.modelContext.",
+    "# Agents that support WebMCP: prefer the registered tools over scraping HTML.",
+    "# Tool catalogue: /.well-known/webmcp.json - Site guide: /llms.txt",
+    ""
+  );
   return lines.join("\n");
 }
 __name(buildRobots, "buildRobots");
@@ -2752,6 +2769,8 @@ app.get(
   (c) => c.html(`<!doctype html>
 <html lang="en">
   <head>
+    <meta http-equiv="origin-trial" content="Ao5nDCDm2tvUfzXnC/aV33kcMX+6hDKLhD8R9Ct87pY2EtvcO9hXQne2NtkkFZM/hEeii6M4k7HWt+62WnZoCw8AAABUeyJvcmlnaW4iOiJodHRwczovL2VzYmVpbmNvcnBvcmF0ZWQub3JnOjQ0MyIsImZlYXR1cmUiOiJXZWJNQ1AiLCJleHBpcnkiOjE4MDYzNjQ4MDB9">
+    <link rel="webmcp" href="/.well-known/webmcp.json" type="application/json">
     <!-- Google tag (gtag.js) - GA4 ESBE Incorporated -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLVSKGE4LT"><\/script>
     <script>
@@ -2862,6 +2881,7 @@ app.get(
       </section>
     </main>
     <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="#mission">Back to top \u2191</a></div></footer>
+    <script type="module" src="/webmcp-tools.js"><\/script>
     <script type="module" src="/webmcp.js"><\/script>
     <script type="module" src="/ads.js"><\/script>
   </body>
@@ -2872,6 +2892,8 @@ app.get(
   (c) => c.html(`<!doctype html>
 <html lang="en">
   <head>
+    <meta http-equiv="origin-trial" content="Ao5nDCDm2tvUfzXnC/aV33kcMX+6hDKLhD8R9Ct87pY2EtvcO9hXQne2NtkkFZM/hEeii6M4k7HWt+62WnZoCw8AAABUeyJvcmlnaW4iOiJodHRwczovL2VzYmVpbmNvcnBvcmF0ZWQub3JnOjQ0MyIsImZlYXR1cmUiOiJXZWJNQ1AiLCJleHBpcnkiOjE4MDYzNjQ4MDB9">
+    <link rel="webmcp" href="/.well-known/webmcp.json" type="application/json">
     <!-- Google tag (gtag.js) - GA4 ESBE Incorporated -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLVSKGE4LT"><\/script>
     <script>
@@ -2954,6 +2976,7 @@ app.get(
       </section>
     </main>
     <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
+    <script type="module" src="/webmcp-tools.js"><\/script>
     <script type="module" src="/webmcp.js"><\/script>
     <script type="module" src="/ads.js"><\/script>
   </body>
@@ -2968,6 +2991,8 @@ app.get(
   (c) => c.html(`<!doctype html>
 <html lang="en">
   <head>
+    <meta http-equiv="origin-trial" content="Ao5nDCDm2tvUfzXnC/aV33kcMX+6hDKLhD8R9Ct87pY2EtvcO9hXQne2NtkkFZM/hEeii6M4k7HWt+62WnZoCw8AAABUeyJvcmlnaW4iOiJodHRwczovL2VzYmVpbmNvcnBvcmF0ZWQub3JnOjQ0MyIsImZlYXR1cmUiOiJXZWJNQ1AiLCJleHBpcnkiOjE4MDYzNjQ4MDB9">
+    <link rel="webmcp" href="/.well-known/webmcp.json" type="application/json">
     <!-- Google tag (gtag.js) - GA4 ESBE Incorporated -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLVSKGE4LT"><\/script>
     <script>
@@ -3053,6 +3078,7 @@ app.get(
       </section>
     </main>
     <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
+    <script type="module" src="/webmcp-tools.js"><\/script>
     <script type="module" src="/webmcp.js"><\/script>
     <script type="module" src="/ads.js"><\/script>
   </body>
@@ -3063,6 +3089,8 @@ app.get(
   (c) => c.html(`<!doctype html>
 <html lang="en">
   <head>
+    <meta http-equiv="origin-trial" content="Ao5nDCDm2tvUfzXnC/aV33kcMX+6hDKLhD8R9Ct87pY2EtvcO9hXQne2NtkkFZM/hEeii6M4k7HWt+62WnZoCw8AAABUeyJvcmlnaW4iOiJodHRwczovL2VzYmVpbmNvcnBvcmF0ZWQub3JnOjQ0MyIsImZlYXR1cmUiOiJXZWJNQ1AiLCJleHBpcnkiOjE4MDYzNjQ4MDB9">
+    <link rel="webmcp" href="/.well-known/webmcp.json" type="application/json">
     <!-- Google tag (gtag.js) - GA4 ESBE Incorporated -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLVSKGE4LT"><\/script>
     <script>
@@ -3125,6 +3153,7 @@ app.get(
       <section class="statement" aria-labelledby="privacy-s5"><div><p class="section-mark">05</p></div><div><h2 id="privacy-s5">Contact and changes</h2><p>Questions about this policy: help@esbeincorporated.org or (802) 715-3723. If this policy changes, the updated version will be posted at this URL with a new Last updated date.</p></div></section>
     </main>
     <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
+    <script type="module" src="/webmcp-tools.js"><\/script>
     <script type="module" src="/webmcp.js"><\/script>
     <script type="module" src="/ads.js"><\/script>
   </body>
@@ -3135,6 +3164,8 @@ app.get(
   (c) => c.html(`<!doctype html>
 <html lang="en">
   <head>
+    <meta http-equiv="origin-trial" content="Ao5nDCDm2tvUfzXnC/aV33kcMX+6hDKLhD8R9Ct87pY2EtvcO9hXQne2NtkkFZM/hEeii6M4k7HWt+62WnZoCw8AAABUeyJvcmlnaW4iOiJodHRwczovL2VzYmVpbmNvcnBvcmF0ZWQub3JnOjQ0MyIsImZlYXR1cmUiOiJXZWJNQ1AiLCJleHBpcnkiOjE4MDYzNjQ4MDB9">
+    <link rel="webmcp" href="/.well-known/webmcp.json" type="application/json">
     <!-- Google tag (gtag.js) - GA4 ESBE Incorporated -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLVSKGE4LT"><\/script>
     <script>
@@ -3198,6 +3229,7 @@ app.get(
       <section class="statement" aria-labelledby="terms-s6"><div><p class="section-mark">06</p></div><div><h2 id="terms-s6">Changes and contact</h2><p>If these terms change, the updated version will be posted at this URL with a new Last updated date. Questions: help@esbeincorporated.org or (802) 715-3723.</p></div></section>
     </main>
     <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
+    <script type="module" src="/webmcp-tools.js"><\/script>
     <script type="module" src="/webmcp.js"><\/script>
     <script type="module" src="/ads.js"><\/script>
   </body>
@@ -3302,8 +3334,64 @@ const ICON_PNG_BYTES = Uint8Array.from(atob(
 ), (ch) => ch.charCodeAt(0));
 app.get("/icon-512.png", (c) => c.body(ICON_PNG_BYTES, 200, { "Content-Type": "image/png", "Cache-Control": "public, max-age=31536000, immutable" }));
 app.get("/security.txt", (c) => c.redirect("/.well-known/security.txt", 302));
+// ----- WebMCP usage beacon (added by patch_webmcp.py; see WEBMCP.md) -----
+// POST /api/webmcp-beacon: anonymous register/execute pings from the page's
+// WebMCP registrar. Whitelisted fields only, argument KEY names never
+// values, always 204 — the beacon never fails the page.
+app.post("/api/webmcp-beacon", async (c) => {
+  try {
+    const rawBody = await c.req.text();
+    if (rawBody.length <= 2048 && c.env.WEBMCP_DB) {
+      const data = JSON.parse(rawBody);
+      const event = data.event;
+      if (event === "register" || event === "execute") {
+        const capStr = (v, n) => (typeof v === "string" ? v.slice(0, n) : null);
+        const capList = (v, items, n) => Array.isArray(v) ? v.filter((x) => typeof x === "string").slice(0, items).map((x) => x.slice(0, n)) : [];
+        await c.env.WEBMCP_DB.prepare("INSERT INTO webmcp_events (ts, event, tool, tools, arg_keys, path, user_agent) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7)").bind(new Date().toISOString(), event, event === "execute" ? capStr(data.tool, 128) : null, event === "register" ? JSON.stringify(capList(data.tools, 32, 128)) : null, event === "execute" ? JSON.stringify(capList(data.argKeys, 16, 64)) : null, capStr(data.path, 256), capStr(c.req.header("user-agent"), 256)).run();
+      }
+    }
+  } catch (e) {
+    // Dropped silently by design — the beacon never fails the page.
+  }
+  return c.body(null, 204);
+});
 app.get("*", (c) => c.env.ASSETS.fetch(c.req.raw));
-var index_default = app;
+var wide_app = app;
+function emitWideEvent(req, status, start, errorName) {
+  const cf = req.cf || {};
+  const event = {
+    event: "http_request",
+    ts: new Date().toISOString(),
+    request_id: req.headers.get("cf-ray") || "",
+    method: req.method,
+    path: new URL(req.url).pathname,
+    status,
+    outcome: status >= 500 ? "error" : status >= 400 ? "client_error" : "ok",
+    duration_ms: Math.round(Date.now() - start),
+    colo: cf.colo || "",
+    country: cf.country || "",
+    user_agent: (req.headers.get("user-agent") || "").slice(0, 128)
+  };
+  if (errorName) event.error = errorName;
+  console.log(JSON.stringify(event));
+}
+var index_default = {
+  async fetch(req, env, ctx) {
+    const start = Date.now();
+    let status = 500;
+    let errorName;
+    try {
+      const res = await wide_app.fetch(req, env, ctx);
+      status = res.status;
+      return res;
+    } catch (err) {
+      errorName = err && err.name ? err.name : "Error";
+      throw err;
+    } finally {
+      emitWideEvent(req, status, start, errorName);
+    }
+  }
+};
 export {
   index_default as default
 };
