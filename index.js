@@ -2200,8 +2200,8 @@ var PAGES = [
         heading: "About",
         paragraphs: [
           "ESBE Incorporated builds practical tools and clear information for veterans and people navigating government-facing services.",
-          "AIVA Claims is a program of ESBE Incorporated. ESBE Tech provides separate technical infrastructure. ESBE is independent and does not speak for or act on behalf of any government agency."
-        ]
+          "AIVA Claims is a program of ESBE Incorporated. ESBE Tech, a separate for-profit technology company, provides technical infrastructure. ESBE Incorporated is independent and does not speak for or act on behalf of any government agency.",
+        ],
       },
       {
         heading: "Our mission",
@@ -2234,14 +2234,14 @@ var PAGES = [
           "These independent public projects make government-facing information and reporting paths more understandable. They do not represent or act for a government agency."
         ],
         links: [
-          L("Hospital Ledger \u2014 a public-good resource for exploring hospital price files published under federal transparency requirements (live)", "https://hospitalledger.com"),
-          L("SF Permit Navigator \u2014 a plain-language permit-path prototype that identifies where an official city system is required (prototype)", "https://sf-permit-detector.barkleesanders.workers.dev"),
-          L("ImproveBayArea \u2014 one public reporting form that routes Bay Area requests to the appropriate official 311 service (live)", "https://improvebayarea.com"),
-          L("NPS Report \u2014 a public tool for reporting maintenance and safety concerns through National Park Service contact paths (live)", "https://nps-report.barkleesanders.workers.dev"),
-          L("SF Income Verify \u2014 a privacy-first income-verification prototype for San Francisco affordable housing; not affiliated with MOHCD (prototype)", "https://sf-income-verify.barkleesanders.workers.dev/#how-it-works"),
-          L("Treasure Island Power \u2014 a public outage tracker documenting Treasure Island power failures and related accountability work (live)", "https://www.treasureislandsfpoweroutages.com"),
-          L("ESBE Tech \u2014 independent infrastructure projects by Barklee Sanders", "https://esbe.tech")
-        ]
+          L("Hospital Ledger — a public-good resource for exploring hospital price files published under federal transparency requirements (live)", "https://hospitalledger.com"),
+          L("SF Permit Navigator — a plain-language permit-path prototype that identifies where an official city system is required (prototype)", "https://sf-permit-detector.barkleesanders.workers.dev"),
+          L("ImproveBayArea — one public reporting form that routes Bay Area requests to the appropriate official 311 service (live)", "https://improvebayarea.com"),
+          L("NPS Report — a public tool for reporting maintenance and safety concerns through National Park Service contact paths (live)", "https://nps-report.barkleesanders.workers.dev"),
+          L("SF Income Verify — a privacy-first income-verification prototype for San Francisco affordable housing; not affiliated with MOHCD (prototype)", "https://sf-income-verify.barkleesanders.workers.dev/#how-it-works"),
+          L("Treasure Island Power — a public outage tracker documenting Treasure Island power failures and related accountability work (live)", "https://www.treasureislandsfpoweroutages.com"),
+          L("ESBE Tech — a separate for-profit technology company; independent infrastructure projects by Barklee Sanders", "https://esbe.tech"),
+        ],
       },
       {
         heading: "Transparency",
@@ -2826,7 +2826,7 @@ app.get(
           </div>
         </div>
         <div class="hero-rule" aria-hidden="true"></div>
-        <p class="hero-note">AIVA Claims is a program of ESBE Incorporated. ESBE Tech provides separate technical infrastructure. ESBE is independent and does not speak for or act on behalf of any government agency.</p>
+        <p class="hero-note">AIVA Claims is a program of ESBE Incorporated. ESBE Tech, a separate for-profit technology company, provides technical infrastructure. ESBE Incorporated is independent and does not speak for or act on behalf of any government agency.</p>
       </section>
 
       <section class="statement" id="mission" aria-labelledby="mission-title">

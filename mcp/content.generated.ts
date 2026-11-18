@@ -64,7 +64,7 @@ export const PAGES: PageEntry[] = [
         "heading": "About",
         "paragraphs": [
           "ESBE Incorporated builds practical tools and clear information for veterans and people navigating government-facing services.",
-          "AIVA Claims is a program of ESBE Incorporated. ESBE Tech provides separate technical infrastructure. ESBE is independent and does not speak for or act on behalf of any government agency."
+          "AIVA Claims is a program of ESBE Incorporated. ESBE Tech, a separate for-profit technology company, provides technical infrastructure. ESBE Incorporated is independent and does not speak for or act on behalf of any government agency."
         ]
       },
       {
@@ -123,7 +123,7 @@ export const PAGES: PageEntry[] = [
             "url": "https://www.treasureislandsfpoweroutages.com"
           },
           {
-            "text": "ESBE Tech — independent infrastructure projects by Barklee Sanders",
+            "text": "ESBE Tech — a separate for-profit technology company; independent infrastructure projects by Barklee Sanders",
             "url": "https://esbe.tech"
           }
         ]

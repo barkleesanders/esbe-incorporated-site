@@ -44,7 +44,7 @@ export const PAGES = [
         heading: "About",
         paragraphs: [
           "ESBE Incorporated builds practical tools and clear information for veterans and people navigating government-facing services.",
-          "AIVA Claims is a program of ESBE Incorporated. ESBE Tech provides separate technical infrastructure. ESBE is independent and does not speak for or act on behalf of any government agency.",
+          "AIVA Claims is a program of ESBE Incorporated. ESBE Tech, a separate for-profit technology company, provides technical infrastructure. ESBE Incorporated is independent and does not speak for or act on behalf of any government agency.",
         ],
       },
       {
@@ -84,7 +84,7 @@ export const PAGES = [
           L("NPS Report — a public tool for reporting maintenance and safety concerns through National Park Service contact paths (live)", "https://nps-report.barkleesanders.workers.dev"),
           L("SF Income Verify — a privacy-first income-verification prototype for San Francisco affordable housing; not affiliated with MOHCD (prototype)", "https://sf-income-verify.barkleesanders.workers.dev/#how-it-works"),
           L("Treasure Island Power — a public outage tracker documenting Treasure Island power failures and related accountability work (live)", "https://www.treasureislandsfpoweroutages.com"),
-          L("ESBE Tech — independent infrastructure projects by Barklee Sanders", "https://esbe.tech"),
+          L("ESBE Tech — a separate for-profit technology company; independent infrastructure projects by Barklee Sanders", "https://esbe.tech"),
         ],
       },
       {
