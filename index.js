@@ -3134,7 +3134,7 @@ app.get(
       <nav aria-label="Primary navigation">
         <a href="/#mission">Mission</a><a href="/#programs">Programs</a><a href="/community">Community</a><a href="/donate">Donate</a><a href="/#transparency">Transparency</a><a href="/#contact">Contact</a>
       </nav>
-      <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">Visit AIVA Claims <span aria-hidden="true">\u2197</span></a>
+      <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">AIVA Claims — free help for veterans <span aria-hidden="true">\u2197</span></a>
     </header>
     <main id="main">
       <section class="hero" aria-labelledby="privacy-title">
@@ -3209,7 +3209,7 @@ app.get(
       <nav aria-label="Primary navigation">
         <a href="/#mission">Mission</a><a href="/#programs">Programs</a><a href="/community">Community</a><a href="/donate">Donate</a><a href="/#transparency">Transparency</a><a href="/#contact">Contact</a>
       </nav>
-      <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">Visit AIVA Claims <span aria-hidden="true">\u2197</span></a>
+      <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">AIVA Claims — free help for veterans <span aria-hidden="true">\u2197</span></a>
     </header>
     <main id="main">
       <section class="hero" aria-labelledby="terms-title">
