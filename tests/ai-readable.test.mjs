@@ -77,7 +77,7 @@ test("handler: .md, /api/md, catalog, llms, ai.txt, robots, 404s", async () => {
   const catJson = await cat.json();
   assert.deepEqual(
     catJson.routes.map((r) => r.path).sort(),
-    ["/", "/community", "/donate"]
+    ["/", "/community", "/donate", "/privacy", "/terms"]
   );
 
   const missing = get("/does-not-exist.md");

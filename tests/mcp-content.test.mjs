@@ -24,7 +24,7 @@ test("freshness: content.generated.ts matches a fresh regeneration (empty diff)"
   assert.match(out, /fresh/);
 });
 
-test("shape: generated module carries SITE identity fields and all three pages", async () => {
+test("shape: generated module carries SITE identity fields and all five pages", async () => {
   const gen = await import(path.join(root, "mcp", "content.generated.ts"));
   const ai = await import(path.join(root, "ai-readable.js"));
 
@@ -37,10 +37,10 @@ test("shape: generated module carries SITE identity fields and all three pages",
   assert.match(gen.SITE.disclosure, /not affiliated with or endorsed by the U\.S\. Department of Veterans Affairs/);
   assert.ok(gen.SITE.determinationLetter.includes("87-1218291"));
 
-  // All three pages, in registry order, with the sections the tools read.
+  // All five pages, in registry order, with the sections the tools read.
   assert.deepEqual(
     gen.PAGES.map((p) => p.path),
-    ["/", "/donate", "/community"]
+    ["/", "/donate", "/community", "/privacy", "/terms"]
   );
   const headings = Object.fromEntries(
     gen.PAGES.map((p) => [p.path, p.sections.map((s) => s.heading)])

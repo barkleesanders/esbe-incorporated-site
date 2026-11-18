@@ -1,6 +1,6 @@
 // ai-readable.js — AI-readable layer for esbeincorporated.org (ScrollLaunch §§1–8).
 // Single source of truth: SITE + PAGES below are transcribed verbatim from the
-// live page templates in index.js (routes /, /donate, /community). No invented
+// live page templates in index.js (routes /, /donate, /community, /privacy, /terms). No invented
 // facts. This file is inlined into index.js by patch_ai_readable.py between
 // AI-READABLE markers; it is also importable standalone for tests.
 // Keep robots.txt, llms.txt and ai.txt in sync — all three are generated here.
@@ -220,6 +220,108 @@ export const PAGES = [
       L("Support ESBE's work — donate", "https://esbeincorporated.org/donate"),
     ],
   },
+  {
+    path: "/privacy",
+    mdPath: "/privacy.md",
+    title: "Privacy Policy | ESBE Incorporated",
+    h1: "Privacy Policy",
+    description: "Privacy policy for esbeincorporated.org and its public read-only MCP server: what is collected (standard request logs, Google Analytics), what is not (accounts, payment data), and who processes it.",
+    aiSummary: "Privacy policy for esbeincorporated.org and its public read-only MCP server: what is collected (standard request logs, Google Analytics), what is not (accounts, payment data), and who processes it.",
+    lastUpdated: "2026-10-30",
+    sections: [
+      {
+        heading: "What this site is",
+        paragraphs: [
+          "esbeincorporated.org is the website of ESBE Incorporated, a 501(c)(3) nonprofit organization (EIN 87-1218291). It publishes information about the organization, its programs - including AIVA Claims, its charitable program for veterans - its community work, and how to donate.",
+          "The site also runs a public, read-only Model Context Protocol (MCP) server at /mcp that re-publishes the same public content to AI assistants."
+        ]
+      },
+      {
+        heading: "Information collected",
+        paragraphs: [
+          "This site has no user accounts and no sign-up forms. Donations are made on Every.org, not on this site, and AIVA Claims accounts are created on aivaclaims.com under that site's own privacy policy.",
+          "Like every website, this site receives standard technical request data - IP address, browser user agent, the page or tool requested, and a timestamp - in server logs operated by Cloudflare, the hosting and security provider. Those logs are used for security, rate limiting, and operations.",
+          "This site uses Google Analytics and Google advertising measurement tags, which may set cookies and collect usage data as described in Google's privacy policy. This data is used in aggregate to understand traffic and measure outreach. ESBE Incorporated does not sell personal information and does not share it with data brokers."
+        ]
+      },
+      {
+        heading: "The MCP server",
+        paragraphs: [
+          "The MCP server at /mcp requires no authentication and every tool is read-only: tools return only content already published on this site or in the server's discovery document. Tool requests are logged with the same technical data as page requests, for rate limiting and abuse prevention.",
+          "Do not send personal or sensitive information in tool arguments. The tools neither need it nor use it."
+        ]
+      },
+      {
+        heading: "Who processes data",
+        paragraphs: [
+          "Cloudflare provides hosting, DNS, and security. Google provides analytics and advertising measurement. Every.org processes donations under its own privacy policy. Each provider's handling of data is governed by its own policy."
+        ]
+      },
+      {
+        heading: "Contact and changes",
+        paragraphs: [
+          "Questions about this policy: help@esbeincorporated.org or (802) 715-3723. If this policy changes, the updated version will be posted at this URL with a new Last updated date."
+        ]
+      }
+    ],
+    related: [
+      L("ESBE Incorporated home", "https://esbeincorporated.org/"),
+      L("Donate to ESBE Incorporated", "https://esbeincorporated.org/donate")
+    ]
+  },
+  {
+    path: "/terms",
+    mdPath: "/terms.md",
+    title: "Terms of Use | ESBE Incorporated",
+    h1: "Terms of Use",
+    description: "Terms of use for esbeincorporated.org and its public read-only MCP server: content as-is and no professional advice, donations via Every.org, MCP acceptable use, liability, California law.",
+    aiSummary: "Terms of use for esbeincorporated.org and its public read-only MCP server: content as-is and no professional advice, donations via Every.org, MCP acceptable use, liability, California law.",
+    lastUpdated: "2026-10-30",
+    sections: [
+      {
+        heading: "Acceptance",
+        paragraphs: [
+          "By using esbeincorporated.org - including its MCP server at /mcp - you agree to these terms. If you do not agree, do not use the site or the server."
+        ]
+      },
+      {
+        heading: "Content and no professional advice",
+        paragraphs: [
+          "Content on this site is provided for general information and is provided as is, without warranties of any kind. It is not legal, tax, medical, or benefits advice, and it is not a substitute for advice from a qualified professional about your own situation.",
+          "ESBE Incorporated is a 501(c)(3) nonprofit organization, EIN 87-1218291. AIVA Claims is a charitable program of ESBE Incorporated. ESBE Incorporated is not affiliated with the U.S. Department of Veterans Affairs, and nothing on this site or in the MCP server's responses implies endorsement by the VA or any government agency."
+        ]
+      },
+      {
+        heading: "Donations",
+        paragraphs: [
+          "Donations are processed by Every.org under its own terms. Whether a gift is tax-deductible, and to what extent, depends on your own circumstances; consult your tax advisor. Donation links on this site go to Every.org; ESBE Incorporated does not collect or store payment card information."
+        ]
+      },
+      {
+        heading: "MCP server use",
+        paragraphs: [
+          "The MCP server is a public, read-only interface to content already published on this site. You may call its tools within its published rate limits. You may not use it to attempt to access non-public data, disrupt the service, bypass rate limits or security controls, or misrepresent the identity of the server, ESBE Incorporated, or AIVA Claims.",
+          "An AI assistant's interpretation, summary, or use of the server's content is the responsibility of that assistant's provider and its user, not of ESBE Incorporated."
+        ]
+      },
+      {
+        heading: "Third-party links and liability",
+        paragraphs: [
+          "This site links to third-party websites and services; their content and terms are their own, and no endorsement is implied. To the maximum extent permitted by law, ESBE Incorporated is not liable for damages arising from use of this site or its MCP server, including reliance on its content. These terms are governed by the laws of the State of California."
+        ]
+      },
+      {
+        heading: "Changes and contact",
+        paragraphs: [
+          "If these terms change, the updated version will be posted at this URL with a new Last updated date. Questions: help@esbeincorporated.org or (802) 715-3723."
+        ]
+      }
+    ],
+    related: [
+      L("ESBE Incorporated home", "https://esbeincorporated.org/"),
+      L("Donate to ESBE Incorporated", "https://esbeincorporated.org/donate")
+    ]
+  }
 ];
 
 // Public Worker routes that are intentionally NOT markdown pages, with reasons.
@@ -359,6 +461,17 @@ export function buildLlms() {
     `- [MCP discovery](${SITE.url}/.well-known/mcp.json): discovery document for the MCP server`,
     ""
   );
+  lines.push(
+    "## WebMCP tools",
+    "",
+    "This site registers WebMCP tools in the browser via document.modelContext. Agents that support WebMCP: prefer these tools over scraping HTML. Tool catalogue (JSON): /.well-known/webmcp.json",
+    "",
+    "- `get_page_guide` — List ESBE Incorporated's public pages (home, donate, community, privacy, terms) with each page's title, description, URL, and last-updated date, from the site's own page catalog.",
+    "- `search_site` — Search the full text of ESBE Incorporated's public pages (home, donate, community, privacy, terms) and return matching excerpts with the page each came from.",
+    "- `get_page` — Read one of ESBE Incorporated's public pages as markdown: /, /donate, /community, /privacy, or /terms. Returns the same markdown the site serves to agents at its .md URLs.",
+    "- `navigate_to_page` — Navigate the visitor's browser to one of ESBE Incorporated's public pages: home (/), donate (/donate), community (/community), privacy (/privacy), or terms (/terms). Only these internal paths are used.",
+    "",
+  );
   return lines.join("\n");
 }
 
@@ -405,7 +518,7 @@ export function buildAiTxt(now = new Date()) {
     `cite as: ${SITE.name} + the canonical HTML URL of the page used`,
     "",
     "[scope]",
-    `included: /, /donate, /community, and their .md versions, /llms.txt, /llms-full.txt, /mcp, /.well-known/mcp.json`,
+    `included: /, /donate, /community, /privacy, /terms, and their .md versions, /llms.txt, /llms-full.txt, /mcp, /.well-known/mcp.json`,
     "excluded: /api/ (machine endpoints; the markdown catalog at /api/md/_catalog is linked from /llms.txt for direct agent requests)",
     "note: this site has no admin, dashboard or auth pages",
     "",
@@ -431,6 +544,12 @@ export function buildRobots() {
   ];
   for (const b of bots) lines.push(`User-agent: ${b}`, "Allow: /", "");
   lines.push(`Sitemap: ${SITE.url}/sitemap.xml`, "");
+  lines.push(
+    "# WebMCP: this site offers in-browser agent tools via document.modelContext.",
+    "# Agents that support WebMCP: prefer the registered tools over scraping HTML.",
+    "# Tool catalogue: /.well-known/webmcp.json - Site guide: /llms.txt",
+    "",
+  );
   return lines.join("\n");
 }
 
