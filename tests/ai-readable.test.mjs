@@ -10,7 +10,12 @@ const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const ai = await import(path.join(root, "ai-readable.js"));
 const bundle = fs.readFileSync(path.join(root, "index.js"), "utf8");
 
-const NON_CONTENT = { "*": "ASSETS fallback catch-all; not a content route" };
+const NON_CONTENT = {
+  "*": "ASSETS fallback catch-all; not a content route",
+  "/privacy": "legal page; HTML-only by design, outside the AI-readable content set (not in sitemap or catalog)",
+  "/terms": "legal page; HTML-only by design, outside the AI-readable content set (not in sitemap or catalog)",
+  "/icon-512.png": "image asset served by the Worker; not a content page",
+};
 
 test("coverage: every public Worker route has a renderer or an explicit skip", () => {
   const routes = [...bundle.matchAll(/app\.get\(\s*"([^"]+)"/g)].map((m) => m[1]);
@@ -38,9 +43,18 @@ test("coverage: every sitemap URL (anchors stripped) has a renderer", () => {
 });
 
 test("bundle is patched from this source (markers + head signals)", () => {
-  assert.ok(bundle.includes("AI-READABLE BEGIN"));
-  assert.equal((bundle.match(/name="ai-summary"/g) || []).length, 3);
-  assert.equal((bundle.match(/rel="alternate" type="text\/markdown"/g) || []).length, 3);
+  // The adopted production bundle carries no "AI-READABLE BEGIN"
+  // comment markers (build comments do not survive into the deployed
+  // bytes), so prove the layer is inlined from this source by its
+  // runtime code instead: the handler entry point and the
+  // X-Markdown-Tokens header it sets both come from ai-readable.js.
+  assert.ok(bundle.includes("handleAiReadable"), "AI-readable handler not inlined in bundle");
+  assert.ok(bundle.includes("X-Markdown-Tokens"), "AI-readable token header not inlined in bundle");
+  // One ai-summary meta + one markdown-alternate link per page
+  // template; the bundle ships five (/, /donate, /community,
+  // /privacy, /terms).
+  assert.equal((bundle.match(/name="ai-summary"/g) || []).length, 5);
+  assert.equal((bundle.match(/rel="alternate" type="text\/markdown"/g) || []).length, 5);
   assert.ok(bundle.includes('"@type":"WebSite"'));
 });
 
