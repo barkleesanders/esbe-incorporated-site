@@ -38,7 +38,7 @@ export const PAGES = [
     description: SITE.description,
     aiSummary:
       "ESBE Incorporated is a 501(c)(3) nonprofit (EIN 87-1218291) advancing veteran support — through its AIVA Claims program, which helps veterans prepare VA disability claims for free — and public-interest access to government-facing services.",
-    lastUpdated: "2026-09-22",
+    lastUpdated: "2026-11-17",
     sections: [
       {
         heading: "About",
@@ -58,6 +58,7 @@ export const PAGES = [
         heading: "AIVA Claims (veteran support)",
         paragraphs: [
           "Free, donor-funded help preparing your VA disability claim. You review, edit, and file everything yourself.",
+          "AIVA Claims is a charitable program of ESBE Incorporated, funded by donors so veterans pay nothing. It helps veterans understand and prepare VA disability claims. No cost to veterans · 501(c)(3) nonprofit, EIN 87-1218291 · Not affiliated with the U.S. Department of Veterans Affairs.",
         ],
         bullets: [
           "Create your free account",
