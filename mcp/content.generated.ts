@@ -58,13 +58,13 @@ export const PAGES: PageEntry[] = [
     "h1": "Public-interest work that helps people move forward",
     "description": "ESBE Incorporated is a 501(c)(3) nonprofit advancing veteran support and public-interest access to government-facing services.",
     "aiSummary": "ESBE Incorporated is a 501(c)(3) nonprofit (EIN 87-1218291) advancing veteran support — through its AIVA Claims program, which helps veterans prepare VA disability claims for free — and public-interest access to government-facing services.",
-    "lastUpdated": "2026-09-22",
+    "lastUpdated": "2026-11-17",
     "sections": [
       {
         "heading": "About",
         "paragraphs": [
           "ESBE Incorporated builds practical tools and clear information for veterans and people navigating government-facing services.",
-          "AIVA Claims is a program of ESBE Incorporated. ESBE Tech provides separate technical infrastructure. ESBE is independent and does not speak for or act on behalf of any government agency."
+          "AIVA Claims is a program of ESBE Incorporated. ESBE Tech, a separate for-profit technology company, provides technical infrastructure. ESBE Incorporated is independent and does not speak for or act on behalf of any government agency."
         ]
       },
       {
@@ -77,7 +77,8 @@ export const PAGES: PageEntry[] = [
       {
         "heading": "AIVA Claims (veteran support)",
         "paragraphs": [
-          "Free, donor-funded help preparing your VA disability claim. You review, edit, and file everything yourself."
+          "Free, donor-funded help preparing your VA disability claim. You review, edit, and file everything yourself.",
+          "AIVA Claims is a charitable program of ESBE Incorporated, funded by donors so veterans pay nothing. It helps veterans understand and prepare VA disability claims. No cost to veterans · 501(c)(3) nonprofit, EIN 87-1218291 · Not affiliated with the U.S. Department of Veterans Affairs."
         ],
         "bullets": [
           "Create your free account",
@@ -123,7 +124,7 @@ export const PAGES: PageEntry[] = [
             "url": "https://www.treasureislandsfpoweroutages.com"
           },
           {
-            "text": "ESBE Tech — independent infrastructure projects by Barklee Sanders",
+            "text": "ESBE Tech — a separate for-profit technology company; independent infrastructure projects by Barklee Sanders",
             "url": "https://esbe.tech"
           }
         ]
@@ -198,7 +199,7 @@ export const PAGES: PageEntry[] = [
   {
     "path": "/donate",
     "mdPath": "/donate.md",
-    "title": "Donate | ESBE Incorporated",
+    "title": "Donate to Support Free VA Claims Help for Veterans | ESBE",
     "h1": "Free help for veterans, funded by people who give",
     "description": "Donate to ESBE Incorporated, a 501(c)(3) nonprofit. Your gift funds free VA claims help for veterans through AIVA Claims.",
     "aiSummary": "Donate to ESBE Incorporated, a 501(c)(3) nonprofit. Your gift funds free VA claims help for veterans through AIVA Claims.",
