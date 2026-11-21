@@ -2279,7 +2279,7 @@ var PAGES = [
   {
     path: "/donate",
     mdPath: "/donate.md",
-    title: "Donate | ESBE Incorporated",
+    title: "Donate to Support Free VA Claims Help for Veterans | ESBE",
     h1: "Free help for veterans, funded by people who give",
     description: "Donate to ESBE Incorporated, a 501(c)(3) nonprofit. Your gift funds free VA claims help for veterans through AIVA Claims.",
     aiSummary: "Donate to ESBE Incorporated, a 501(c)(3) nonprofit. Your gift funds free VA claims help for veterans through AIVA Claims.",
@@ -2913,7 +2913,7 @@ app.get(
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ESBE Incorporated" />
-    <meta property="og:title" content="Donate | ESBE Incorporated" />
+    <meta property="og:title" content="Donate to Support Free VA Claims Help for Veterans | ESBE" />
     <meta property="og:description" content="Your gift funds free VA disability claims help for veterans. Donor-funded 501(c)(3) nonprofit." />
     <meta property="og:url" content="https://esbeincorporated.org/donate" />
     <meta property="og:image" content="https://esbeincorporated.org/og.png" />
@@ -2921,14 +2921,15 @@ app.get(
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Donate | ESBE Incorporated" />
+    <meta name="twitter:title" content="Donate to Support Free VA Claims Help for Veterans | ESBE" />
     <meta name="twitter:description" content="Your gift funds free VA disability claims help for veterans." />
     <meta name="twitter:image" content="https://esbeincorporated.org/og.png" />
     <link rel="stylesheet" href="/styles.css" />
-    <title>Donate | ESBE Incorporated</title>
+    <title>Donate to Support Free VA Claims Help for Veterans | ESBE</title>
     <meta name="ai-summary" content="Donate to ESBE Incorporated, a 501(c)(3) nonprofit. Your gift funds free VA claims help for veterans through AIVA Claims." />
     <link rel="alternate" type="text/markdown" href="https://esbeincorporated.org/donate.md" />
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"ESBE Incorporated","url":"https://esbeincorporated.org/","taxID":"87-1218291","email":"help@esbeincorporated.org","sameAs":["${determinationLetter}"]}<\/script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://esbeincorporated.org/"},{"@type":"ListItem","position":2,"name":"Donate","item":"https://esbeincorporated.org/donate"}]}<\/script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -2940,6 +2941,7 @@ app.get(
       <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">AIVA Claims — free help for veterans <span aria-hidden="true">\u2197</span></a>
     </header>
     <main id="main">
+      <nav aria-label="Breadcrumb" class="breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Donate</li></ol></nav>
       <section class="hero" aria-labelledby="donate-title">
         <p class="eyebrow">501(C)(3) NONPROFIT \u2022 DONOR-FUNDED</p>
         <div class="hero-grid">
@@ -3027,6 +3029,7 @@ app.get(
     <meta name="ai-summary" content="ESBE Incorporated's community work on Treasure Island: public documentation of power outages and plain-language paths to official reporting channels for residents." />
     <link rel="alternate" type="text/markdown" href="https://esbeincorporated.org/community.md" />
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"ESBE Incorporated","url":"https://esbeincorporated.org/","taxID":"87-1218291","email":"help@esbeincorporated.org","sameAs":["${determinationLetter}"]}<\/script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://esbeincorporated.org/"},{"@type":"ListItem","position":2,"name":"Community","item":"https://esbeincorporated.org/community"}]}<\/script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -3038,6 +3041,7 @@ app.get(
       <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">AIVA Claims — free help for veterans <span aria-hidden="true">↗</span></a>
     </header>
     <main id="main">
+      <nav aria-label="Breadcrumb" class="breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Community</li></ol></nav>
       <section class="hero" aria-labelledby="community-title">
         <p class="eyebrow">COMMUNITY \u2022 TREASURE ISLAND \u2022 PUBLIC INFRASTRUCTURE</p>
         <div class="hero-grid">

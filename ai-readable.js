@@ -122,7 +122,7 @@ export const PAGES = [
   {
     path: "/donate",
     mdPath: "/donate.md",
-    title: "Donate | ESBE Incorporated",
+    title: "Donate to Support Free VA Claims Help for Veterans | ESBE",
     h1: "Free help for veterans, funded by people who give",
     description:
       "Donate to ESBE Incorporated, a 501(c)(3) nonprofit. Your gift funds free VA claims help for veterans through AIVA Claims.",
