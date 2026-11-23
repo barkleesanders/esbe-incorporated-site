@@ -24,7 +24,7 @@ test("freshness: content.generated.ts matches a fresh regeneration (empty diff)"
   assert.match(out, /fresh/);
 });
 
-test("shape: generated module carries SITE identity fields and all three pages", async () => {
+test("shape: generated module carries SITE identity fields and all ten pages", async () => {
   const gen = await import(path.join(root, "mcp", "content.generated.ts"));
   const ai = await import(path.join(root, "ai-readable.js"));
 
@@ -37,10 +37,10 @@ test("shape: generated module carries SITE identity fields and all three pages",
   assert.match(gen.SITE.disclosure, /not affiliated with or endorsed by the U\.S\. Department of Veterans Affairs/);
   assert.ok(gen.SITE.determinationLetter.includes("87-1218291"));
 
-  // All three pages, in registry order, with the sections the tools read.
+  // All ten pages, in registry order, with the sections the tools read.
   assert.deepEqual(
     gen.PAGES.map((p) => p.path),
-    ["/", "/donate", "/community"]
+    ["/", "/donate", "/community", "/va-claim-guide", "/nexus-letter", "/privacy", "/terms", "/about", "/programs", "/contact"]
   );
   const headings = Object.fromEntries(
     gen.PAGES.map((p) => [p.path, p.sections.map((s) => s.heading)])
@@ -51,6 +51,12 @@ test("shape: generated module carries SITE identity fields and all three pages",
     assert.ok(headings["/donate"].includes(h), `donate page missing section ${h}`);
   for (const h of ["About this work", "Why it matters", "Community resources"])
     assert.ok(headings["/community"].includes(h), `community page missing section ${h}`);
+  for (const h of ["Who we are", "Organization details", "What we do", "Transparency"])
+    assert.ok(headings["/about"].includes(h), `about page missing section ${h}`);
+  for (const h of ["AIVA Claims (veteran support)", "Public-interest services", "Selected civic projects", "Community work", "Transparency"])
+    assert.ok(headings["/programs"].includes(h), `programs page missing section ${h}`);
+  for (const h of ["How to reach us", "AIVA Claims support", "Organization details"])
+    assert.ok(headings["/contact"].includes(h), `contact page missing section ${h}`);
 
   // The generated copy is the registry, not a paraphrase of it.
   assert.deepEqual(gen.SITE, ai.SITE);

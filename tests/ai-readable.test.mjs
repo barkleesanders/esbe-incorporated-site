@@ -69,6 +69,9 @@ test("handler: .md, /api/md, catalog, llms, ai.txt, robots, 404s", async () => {
 
   assert.equal(get("/donate.md").status, 200);
   assert.equal(get("/community.md").status, 200);
+  assert.equal(get("/about.md").status, 200);
+  assert.equal(get("/programs.md").status, 200);
+  assert.equal(get("/contact.md").status, 200);
   assert.equal(get("/api/md/donate").status, 200);
   assert.equal(get("/api/md/index").status, 200);
 
@@ -77,14 +80,13 @@ test("handler: .md, /api/md, catalog, llms, ai.txt, robots, 404s", async () => {
   const catJson = await cat.json();
   assert.deepEqual(
     catJson.routes.map((r) => r.path).sort(),
-    ["/", "/community", "/donate"]
+    ["/", "/about", "/community", "/contact", "/donate", "/nexus-letter", "/privacy", "/programs", "/terms", "/va-claim-guide"]
   );
 
   const missing = get("/does-not-exist.md");
   assert.equal(missing.status, 404);
   assert.match(await missing.text(), /# Not Found/);
   assert.equal(get("/blog.md").status, 404);
-  assert.equal(get("/about.md").status, 404);
   assert.equal(get("/api/md/blog").status, 404);
 
   const llms = await get("/llms.txt").text();

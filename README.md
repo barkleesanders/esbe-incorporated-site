@@ -134,3 +134,54 @@ This baseline adopts the recovered live `index.js` bytes, per this repo's
 patches the bytes production actually runs — including the `/privacy` and
 `/terms` Worker routes, which exist only in this build. No code changes in
 this baseline; nothing was deployed.
+
+## 2026-11-23 — live-bytes baseline (version #44)
+
+Production had moved past the repo tip again: the deployed script
+(version `b2b76a75-9fee-4889-a6b6-28e2969010fc`, #44) carries an
+`index.js` of 267,396 bytes (sha256
+`461787f273cae0ec1142206f1f4997ae1d3982bf28c1d40329829987cf278733`)
+with two routes the repo lacked — `/va-claim-guide` and
+`/nexus-letter` (both added 2026-11-22) — plus matching
+`public/webmcp-tools.js` and `public/sitemap.xml` updates. Per this
+repo's recovery precedent (2026-10-15 / 2026-10-23 / 2026-11-03), the
+live bytes were recovered via the Cloudflare API script download and
+adopted as the new baseline; the Traks parts and every other asset
+were verified byte-identical to live before adopting. No code changes
+in this baseline; nothing was deployed.
+
+## 2026-11-23 — Google for Nonprofits activation fix (address + site depth)
+
+Google for Nonprofits Support (2026-11-23) said the Workspace
+activation for esbeincorporated.org could not be processed because
+Google could not confirm ESBE Incorporated owns/operates the domain:
+the site did not explicitly display the physical street address / org
+details submitted at registration, and it read as a single-page site
+without standard sub-pages. This change answers both points:
+
+- The registered address — **1070 Bridgeview Way, Apt 1010, San
+  Francisco, CA 94158**, the physical address on ESBE Incorporated's
+  SAM.gov registration (UEI KHWFAQ25EZX3), confirmed in DLA's CAGE
+  review correspondence of 2026-11-04 — now appears in every footer,
+  every transparency fact list, the home contact section, the home NGO
+  JSON-LD (PostalAddress), and the markdown layer.
+- New sub-pages **/about**, **/programs**, **/contact** (HTML routes +
+  markdown registry entries), linked from every page's primary nav;
+  Programs and Contact nav items now point at them. The /programs page
+  reuses the homepage's program grid and civic-projects block verbatim.
+- `ai-readable.js` also gained faithful transcriptions of the four
+  pages that previously existed only in the live bundle
+  (/va-claim-guide, /nexus-letter, /privacy, /terms), so the source
+  registry again covers every public route; `/icon-512.png` joined
+  SKIPS as an image asset. Sitemap and `public/webmcp-tools.js` page
+  lists cover all ten pages; `mcp/content.generated.ts` regenerated.
+
+Bundle side applied by `patch_pages.py` (assertion-guarded, refuses to
+run twice; it extracts the /community route's shell at patch time so
+the new pages match the deployed design). Test pins updated only where
+they encoded the old page set / template counts. Two failures remain,
+both pre-existing at the 2026-11-23 baseline and unrelated: the
+AI-READABLE marker test (the live bundle line is built from the laptop
+TS source and carries no marker block) and the ads.js event-pattern
+test (ads.js dispatches via a `gaEvent` variable; the literal regexes
+predate that refactor).
