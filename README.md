@@ -134,3 +134,18 @@ This baseline adopts the recovered live `index.js` bytes, per this repo's
 patches the bytes production actually runs — including the `/privacy` and
 `/terms` Worker routes, which exist only in this build. No code changes in
 this baseline; nothing was deployed.
+
+## 2026-11-23 — live-bytes baseline (version #44)
+
+Production had moved past the repo tip again: the deployed script
+(version `b2b76a75-9fee-4889-a6b6-28e2969010fc`, #44) carries an
+`index.js` of 267,396 bytes (sha256
+`461787f273cae0ec1142206f1f4997ae1d3982bf28c1d40329829987cf278733`)
+with two routes the repo lacked — `/va-claim-guide` and
+`/nexus-letter` (both added 2026-11-22) — plus matching
+`public/webmcp-tools.js` and `public/sitemap.xml` updates. Per this
+repo's recovery precedent (2026-10-15 / 2026-10-23 / 2026-11-03), the
+live bytes were recovered via the Cloudflare API script download and
+adopted as the new baseline; the Traks parts and every other asset
+were verified byte-identical to live before adopting. No code changes
+in this baseline; nothing was deployed.
