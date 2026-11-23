@@ -40,7 +40,7 @@ test("shape: generated module carries SITE identity fields and all five pages", 
   // All five pages, in registry order, with the sections the tools read.
   assert.deepEqual(
     gen.PAGES.map((p) => p.path),
-    ["/", "/donate", "/community", "/privacy", "/terms"]
+    ["/", "/donate", "/community", "/va-claim-guide", "/nexus-letter", "/privacy", "/terms"]
   );
   const headings = Object.fromEntries(
     gen.PAGES.map((p) => [p.path, p.sections.map((s) => s.heading)])

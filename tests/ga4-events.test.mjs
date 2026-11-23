@@ -18,8 +18,8 @@ test("every page template carries the GA4 tag (home, /donate, /community, /priva
   // /privacy, /terms. Each carries the gtag.js loader once (the loader
   // URL carries the measurement ID) plus one gtag('config', ID) call,
   // so the ID appears exactly twice per template.
-  assert.equal((bundle.match(/googletagmanager\.com\/gtag\/js/g) || []).length, 5);
-  assert.equal((bundle.match(/G-YLVSKGE4LT/g) || []).length, 10);
+  assert.equal((bundle.match(/googletagmanager\.com\/gtag\/js/g) || []).length, 7);
+  assert.equal((bundle.match(/G-YLVSKGE4LT/g) || []).length, 14);
 });
 
 test("ads.js fires both Ads conversion events with exact GA4 names", () => {
@@ -50,7 +50,7 @@ test("ads.js is loaded on every page template", () => {
   // One <script src="/ads.js"> per page template; the bundle ships
   // five templates (/, /donate, /community, /privacy, /terms) and the
   // three content pages are among them.
-  assert.equal((bundle.match(/src="\/ads\.js"/g) || []).length, 5);
+  assert.equal((bundle.match(/src="\/ads\.js"/g) || []).length, 7);
 });
 
 test("CSP allows the hosts gtag.js actually collects to", () => {

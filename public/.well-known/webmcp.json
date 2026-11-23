@@ -1,0 +1,48 @@
+{
+  "name": "ESBE Incorporated",
+  "url": "https://esbeincorporated.org/",
+  "description": "WebMCP tool catalogue for esbeincorporated.org. These tools are registered in the browser via document.modelContext on every page of the site; this document lists them for discovery. Executable definitions ship in /webmcp-tools.js.",
+  "tools": [
+    {
+      "name": "get_page_guide",
+      "description": "List ESBE Incorporated's public pages (home, donate, community, va claim guide, nexus letter, privacy, terms) with each page's title, description, URL, and last-updated date, from the site's own page catalog.",
+      "inputSchema": { "type": "object", "properties": {}, "additionalProperties": false }
+    },
+    {
+      "name": "search_site",
+      "description": "Search the full text of ESBE Incorporated's public pages (home, donate, community, va claim guide, nexus letter, privacy, terms) and return matching excerpts with the page each came from.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string", "description": "Words to find across the site's pages, e.g. 'donate', 'veterans', 'Treasure Island'." }
+        },
+        "required": ["query"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_page",
+      "description": "Fetch one ESBE page's published content (title, sections, facts, links) as clean markdown: /, /donate, /community, /va-claim-guide, /nexus-letter, /privacy, or /terms.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string", "description": "Page path: /, /donate, /community, /va-claim-guide, /nexus-letter, /privacy, or /terms" }
+        },
+        "required": ["path"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "navigate_to_page",
+      "description": "Navigate the visitor's browser to one of ESBE Incorporated's public pages: home (/), donate (/donate), community (/community), va claim guide (/va-claim-guide), nexus letter (/nexus-letter), privacy (/privacy), or terms (/terms). Only these internal paths are used.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "page": { "type": "string", "description": "Destination: home, donate, community, va-claim-guide, nexus-letter, privacy, terms \u2014 or the exact path like /donate" }
+        },
+        "required": ["page"],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

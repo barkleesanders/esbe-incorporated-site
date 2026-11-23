@@ -53,8 +53,8 @@ test("bundle is patched from this source (markers + head signals)", () => {
   // One ai-summary meta + one markdown-alternate link per page
   // template; the bundle ships five (/, /donate, /community,
   // /privacy, /terms).
-  assert.equal((bundle.match(/name="ai-summary"/g) || []).length, 5);
-  assert.equal((bundle.match(/rel="alternate" type="text\/markdown"/g) || []).length, 5);
+  assert.equal((bundle.match(/name="ai-summary"/g) || []).length, 7);
+  assert.equal((bundle.match(/rel="alternate" type="text\/markdown"/g) || []).length, 7);
   assert.ok(bundle.includes('"@type":"WebSite"'));
 });
 
@@ -83,6 +83,10 @@ test("handler: .md, /api/md, catalog, llms, ai.txt, robots, 404s", async () => {
 
   assert.equal(get("/donate.md").status, 200);
   assert.equal(get("/community.md").status, 200);
+  assert.equal(get("/va-claim-guide.md").status, 200);
+  assert.equal(get("/nexus-letter.md").status, 200);
+  assert.equal(get("/api/md/va-claim-guide").status, 200);
+  assert.equal(get("/api/md/nexus-letter").status, 200);
   assert.equal(get("/api/md/donate").status, 200);
   assert.equal(get("/api/md/index").status, 200);
 
@@ -91,7 +95,7 @@ test("handler: .md, /api/md, catalog, llms, ai.txt, robots, 404s", async () => {
   const catJson = await cat.json();
   assert.deepEqual(
     catJson.routes.map((r) => r.path).sort(),
-    ["/", "/community", "/donate", "/privacy", "/terms"]
+    ["/", "/community", "/donate", "/nexus-letter", "/privacy", "/terms", "/va-claim-guide"]
   );
 
   const missing = get("/does-not-exist.md");

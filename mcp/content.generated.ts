@@ -58,7 +58,7 @@ export const PAGES: PageEntry[] = [
     "h1": "Public-interest work that helps people move forward",
     "description": "ESBE Incorporated is a 501(c)(3) nonprofit advancing veteran support and public-interest access to government-facing services.",
     "aiSummary": "ESBE Incorporated is a 501(c)(3) nonprofit (EIN 87-1218291) advancing veteran support — through its AIVA Claims program, which helps veterans prepare VA disability claims for free — and public-interest access to government-facing services.",
-    "lastUpdated": "2026-11-17",
+    "lastUpdated": "2026-11-22",
     "sections": [
       {
         "heading": "About",
@@ -85,6 +85,16 @@ export const PAGES: PageEntry[] = [
           "Upload your records",
           "Review your draft claim package",
           "File it yourself with the VA"
+        ],
+        "links": [
+          {
+            "text": "How to file a VA disability claim — a step-by-step guide",
+            "url": "https://esbeincorporated.org/va-claim-guide"
+          },
+          {
+            "text": "Nexus letters — what they are and when a claim needs one",
+            "url": "https://esbeincorporated.org/nexus-letter"
+          }
         ]
       },
       {
@@ -189,6 +199,14 @@ export const PAGES: PageEntry[] = [
       {
         "text": "Donate to ESBE Incorporated",
         "url": "https://esbeincorporated.org/donate"
+      },
+      {
+        "text": "How to file a VA disability claim — a step-by-step guide",
+        "url": "https://esbeincorporated.org/va-claim-guide"
+      },
+      {
+        "text": "Nexus letters — what they are and when a claim needs one",
+        "url": "https://esbeincorporated.org/nexus-letter"
       },
       {
         "text": "AIVA Claims — create your free account",
@@ -371,6 +389,241 @@ export const PAGES: PageEntry[] = [
       {
         "text": "Support ESBE's work — donate",
         "url": "https://esbeincorporated.org/donate"
+      }
+    ]
+  },
+  {
+    "path": "/va-claim-guide",
+    "mdPath": "/va-claim-guide.md",
+    "title": "How to File a VA Disability Claim | ESBE Incorporated",
+    "h1": "How to file a VA disability claim, step by step",
+    "description": "A plain-language guide to filing a VA disability claim: who can file, how to protect your effective date, the evidence VA looks for, how to file VA Form 21-526EZ, what happens at the C&P exam, and what to do after a decision — with free preparation help from AIVA Claims.",
+    "aiSummary": "A plain-language guide to filing a VA disability claim: who can file, how to protect your effective date, the evidence VA looks for, how to file VA Form 21-526EZ, what happens at the C&P exam, and what to do after a decision — with free preparation help from AIVA Claims.",
+    "lastUpdated": "2026-11-22",
+    "sections": [
+      {
+        "heading": "Who can file",
+        "paragraphs": [
+          "You can file a claim for VA disability compensation if you have a current medical condition that was caused by — or made worse by — your military service. You do not need to be retired, and the condition does not need to have been treated while you were serving. What VA looks for is evidence connecting the condition to your service.",
+          "This guide covers the standard disability claim process in general terms. It is general information, not legal or benefits advice, and it cannot cover every situation — claims for survivors' benefits, pension, and education benefits follow different rules."
+        ]
+      },
+      {
+        "heading": "Step 1 — Protect your effective date",
+        "paragraphs": [
+          "If you plan to file but are not ready yet, submit an intent to file — VA Form 21-0966 — online at VA.gov, by phone, or by mail. An intent to file generally gives you up to one year to complete and submit your claim while keeping the earlier date as your potential effective date, which is the date VA uses when it calculates any back pay.",
+          "You can have only one intent to file open at a time, and it expires if the claim is not completed within the year."
+        ]
+      },
+      {
+        "heading": "Step 2 — Gather your evidence",
+        "paragraphs": [
+          "VA decides claims on evidence. Before you file, gather what you have; you can also tell VA where your records are. The most useful evidence usually includes:",
+          "VA has a duty to help you obtain federal records, including your service treatment records and VA treatment records. Private medical records are your responsibility unless you give VA the details and signed authorization it needs to request them."
+        ],
+        "bullets": [
+          "Your DD214 or other separation documents",
+          "Service treatment records from your time in service",
+          "VA medical records and private treatment records for the condition",
+          "A current diagnosis from a medical provider",
+          "Statements from fellow service members (often called buddy statements) and from family members who know the condition's history",
+          "A medical opinion linking the condition to your service — a nexus letter — when the connection is not already clear in the records"
+        ]
+      },
+      {
+        "heading": "Step 3 — File the claim",
+        "paragraphs": [
+          "Most veterans file VA Form 21-526EZ, the standard application for disability compensation. You can file online at VA.gov, by mail to VA's claims intake center, or in person at a VA regional office.",
+          "You do not have to do it alone: accredited veterans service organizations (VSOs) help for free, and accredited attorneys and claims agents can also help. By law, no one may charge you a fee for help with an initial claim."
+        ]
+      },
+      {
+        "heading": "Step 4 — The C&P exam",
+        "paragraphs": [
+          "After you file, VA may schedule a Compensation and Pension (C&P) exam. The exam is not treatment. The examiner reviews your records, examines you, and gives VA a medical opinion about your condition and whether it is connected to your service.",
+          "Attending matters: if you miss the exam without rescheduling, VA can decide the claim without that evidence. Describe how the condition affects your daily life and your work in concrete terms, including your worst days, not just the day of the exam."
+        ]
+      },
+      {
+        "heading": "Step 5 — VA decides, and what happens next",
+        "paragraphs": [
+          "VA sends a rating decision listing each condition, whether it is service-connected, and the disability rating assigned to it. Ratings for separate conditions are combined using VA's combined ratings table — they are not simply added together.",
+          "If you disagree with any part of the decision, you generally have one year from the decision date to act while preserving your place: file a Supplemental Claim with new and relevant evidence, request a Higher-Level Review of the existing record, or appeal to the Board of Veterans' Appeals. Each path has different rules about evidence and timing, so choose deliberately."
+        ]
+      },
+      {
+        "heading": "How AIVA Claims helps",
+        "paragraphs": [
+          "AIVA Claims is a charitable program of ESBE Incorporated. It helps veterans understand and prepare VA disability claims at no cost: organizing records, making sense of the process, and preparing a claim package you can stand behind. You review, edit, and file everything yourself."
+        ],
+        "links": [
+          {
+            "text": "Create your free AIVA Claims account",
+            "url": "https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&utm_medium=nonprofit_site&utm_campaign=programs_cta"
+          },
+          {
+            "text": "Nexus letters — what they are and when a claim needs one",
+            "url": "https://esbeincorporated.org/nexus-letter"
+          }
+        ]
+      },
+      {
+        "heading": "Transparency",
+        "facts": [
+          [
+            "Organization",
+            "ESBE Incorporated"
+          ],
+          [
+            "Federal tax ID",
+            "87-1218291"
+          ],
+          [
+            "Federal status",
+            "501(c)(3) nonprofit organization"
+          ],
+          [
+            "Program relationship",
+            "AIVA Claims is a program of ESBE Incorporated."
+          ]
+        ],
+        "links": [
+          {
+            "text": "Read the IRS determination letter",
+            "url": "https://apps.irs.gov/pub/epostcard/dl/FinalLetter_87-1218291_ESBEINCORPORATED_05012026_v1.0.pdf"
+          },
+          {
+            "text": "Contact us about this guide",
+            "url": "mailto:help@esbeincorporated.org?subject=ESBE%20Incorporated%20VA%20claim%20guide%20inquiry"
+          }
+        ]
+      }
+    ],
+    "related": [
+      {
+        "text": "Nexus letters — what they are and when a claim needs one",
+        "url": "https://esbeincorporated.org/nexus-letter"
+      },
+      {
+        "text": "ESBE Incorporated home",
+        "url": "https://esbeincorporated.org/"
+      },
+      {
+        "text": "AIVA Claims — create your free account",
+        "url": "https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&utm_medium=nonprofit_site&utm_campaign=programs_cta"
+      }
+    ]
+  },
+  {
+    "path": "/nexus-letter",
+    "mdPath": "/nexus-letter.md",
+    "title": "Nexus Letters for VA Disability Claims | ESBE Incorporated",
+    "h1": "Nexus letters: connecting your condition to your service",
+    "description": "What a nexus letter is, when a VA disability claim needs one, what makes a medical nexus opinion credible, and how AIVA Claims — a program of ESBE Incorporated — helps veterans organize the records behind one, for free.",
+    "aiSummary": "What a nexus letter is, when a VA disability claim needs one, what makes a medical nexus opinion credible, and how AIVA Claims — a program of ESBE Incorporated — helps veterans organize the records behind one, for free.",
+    "lastUpdated": "2026-11-22",
+    "sections": [
+      {
+        "heading": "What a nexus letter is",
+        "paragraphs": [
+          "To grant service connection, VA generally looks for three things: a current, diagnosed condition; an event, injury, illness, or symptom during your service; and a link between the two. That link is the nexus.",
+          "A nexus letter is a written medical opinion, from a qualified medical professional, that explains the link. It gives the professional's opinion on whether your current condition is connected to your service — and, just as important, the reasoning and the records behind that opinion."
+        ]
+      },
+      {
+        "heading": "When a claim needs one",
+        "paragraphs": [
+          "A nexus opinion matters most when the connection between service and condition needs a medical explanation. That is often the case when:",
+          "When the connection is already plain in the records — for example, an injury documented in service and treated continuously ever since — VA may grant service connection without one."
+        ],
+        "bullets": [
+          "The condition was not diagnosed or documented while you were serving",
+          "You are claiming a secondary condition — one caused or made worse by an already service-connected condition",
+          "VA denied an earlier claim because the connection to service was not shown",
+          "The condition was first diagnosed years after separation",
+          "Your service records are incomplete"
+        ]
+      },
+      {
+        "heading": "What makes a nexus opinion credible",
+        "paragraphs": [
+          "VA weighs a medical opinion by the reasoning and records behind it. A short letter that states a conclusion with no rationale and no sign the writer saw your records usually carries little weight. A credible nexus opinion:"
+        ],
+        "bullets": [
+          "Comes from a medical professional qualified to speak to the condition",
+          "States that the writer reviewed your relevant records — service treatment records and your treatment history",
+          "Gives a clear opinion in VA's standard terms: whether the condition is 'at least as likely as not' connected to service — VA's way of describing a probability of 50 percent or better",
+          "Explains the medical reasoning instead of stating a bare conclusion",
+          "Addresses your specific condition and history, not a generic template"
+        ]
+      },
+      {
+        "heading": "What a nexus letter cannot do",
+        "paragraphs": [
+          "A nexus letter is evidence, not a decision. VA makes the final call on service connection and on your rating, and no letter can guarantee an outcome. Be cautious of anyone who promises a specific result, or who offers to write an opinion about you without reviewing your records.",
+          "AIVA Claims does not write medical opinions — those come from medical professionals. What we do is help you prepare everything around one."
+        ]
+      },
+      {
+        "heading": "How AIVA Claims helps",
+        "paragraphs": [
+          "AIVA Claims is a charitable program of ESBE Incorporated. We help veterans prepare VA disability claims for free: understanding when a claim needs a nexus opinion, organizing the service and medical records a medical professional would need to review, and preparing your claim package. You review, edit, and file everything yourself."
+        ],
+        "links": [
+          {
+            "text": "Create your free AIVA Claims account",
+            "url": "https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&utm_medium=nonprofit_site&utm_campaign=programs_cta"
+          },
+          {
+            "text": "How to file a VA disability claim — a step-by-step guide",
+            "url": "https://esbeincorporated.org/va-claim-guide"
+          }
+        ]
+      },
+      {
+        "heading": "Transparency",
+        "facts": [
+          [
+            "Organization",
+            "ESBE Incorporated"
+          ],
+          [
+            "Federal tax ID",
+            "87-1218291"
+          ],
+          [
+            "Federal status",
+            "501(c)(3) nonprofit organization"
+          ],
+          [
+            "Program relationship",
+            "AIVA Claims is a program of ESBE Incorporated."
+          ]
+        ],
+        "links": [
+          {
+            "text": "Read the IRS determination letter",
+            "url": "https://apps.irs.gov/pub/epostcard/dl/FinalLetter_87-1218291_ESBEINCORPORATED_05012026_v1.0.pdf"
+          },
+          {
+            "text": "Contact us about this page",
+            "url": "mailto:help@esbeincorporated.org?subject=ESBE%20Incorporated%20nexus%20letter%20inquiry"
+          }
+        ]
+      }
+    ],
+    "related": [
+      {
+        "text": "How to file a VA disability claim — a step-by-step guide",
+        "url": "https://esbeincorporated.org/va-claim-guide"
+      },
+      {
+        "text": "ESBE Incorporated home",
+        "url": "https://esbeincorporated.org/"
+      },
+      {
+        "text": "AIVA Claims — create your free account",
+        "url": "https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&utm_medium=nonprofit_site&utm_campaign=programs_cta"
       }
     ]
   },
