@@ -13,9 +13,9 @@ const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const bundle = fs.readFileSync(path.join(root, "index.js"), "utf8");
 const ads = fs.readFileSync(path.join(root, "public/ads.js"), "utf8");
 
-test("every page template carries the GA4 tag (home, /donate, /community)", () => {
-  assert.equal((bundle.match(/G-YLVSKGE4LT/g) || []).length, 6);
-  assert.equal((bundle.match(/googletagmanager\.com\/gtag\/js/g) || []).length, 3);
+test("every page template carries the GA4 tag (all ten pages)", () => {
+  assert.equal((bundle.match(/G-YLVSKGE4LT/g) || []).length, 20);
+  assert.equal((bundle.match(/googletagmanager\.com\/gtag\/js/g) || []).length, 10);
 });
 
 test("ads.js fires both Ads conversion events with exact GA4 names", () => {
@@ -30,8 +30,8 @@ test("the CTAs the events describe exist in the bundle", () => {
   assert.ok(bundle.includes("www.every.org/esbe-incorporated"), "Every.org donate CTA missing");
 });
 
-test("ads.js is loaded on all three page templates", () => {
-  assert.equal((bundle.match(/src="\/ads\.js"/g) || []).length, 3);
+test("ads.js is loaded on all ten page templates", () => {
+  assert.equal((bundle.match(/src="\/ads\.js"/g) || []).length, 10);
 });
 
 test("CSP allows the hosts gtag.js actually collects to", () => {

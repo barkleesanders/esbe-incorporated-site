@@ -2195,7 +2195,7 @@ var PAGES = [
     description: SITE.description,
     aiSummary:
       "ESBE Incorporated is a 501(c)(3) nonprofit (EIN 87-1218291) advancing veteran support — through its AIVA Claims program, which helps veterans prepare VA disability claims for free — and public-interest access to government-facing services.",
-    lastUpdated: "2026-11-22",
+    lastUpdated: "2026-11-23",
     sections: [
       {
         heading: "About",
@@ -2255,6 +2255,7 @@ var PAGES = [
           ["Organization", "ESBE Incorporated"],
           ["Federal tax ID", "87-1218291"],
           ["Federal status", "501(c)(3) nonprofit organization"],
+          ["Registered address", "1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158"],
           ["Public purpose", "Veteran support and public-interest access to government-facing services."],
           ["Program relationship", "AIVA Claims is a program of ESBE Incorporated."],
           ["Government relationship", "Independent nonprofit; not a government agency."]
@@ -2270,6 +2271,7 @@ var PAGES = [
         paragraphs: [
           "For public inquiries, governance requests, and nonprofit correspondence, reach us by email or phone.",
           "Email: help@esbeincorporated.org \xB7 Phone: (802) 715-3723",
+          "Mailing and registered address: ESBE Incorporated, 1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158.",
           DISCLOSURE
         ]
       }
@@ -2279,6 +2281,8 @@ var PAGES = [
       L("Donate to ESBE Incorporated", "https://esbeincorporated.org/donate"),
       L("How to file a VA disability claim \u2014 a step-by-step guide", "https://esbeincorporated.org/va-claim-guide"),
       L("Nexus letters \u2014 what they are and when a claim needs one", "https://esbeincorporated.org/nexus-letter"),
+      L("About ESBE Incorporated", "https://esbeincorporated.org/about"),
+      L("Contact ESBE Incorporated", "https://esbeincorporated.org/contact"),
       L("AIVA Claims \u2014 create your free account", "https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&utm_medium=nonprofit_site&utm_campaign=programs_cta")
     ]
   },
@@ -2654,6 +2658,197 @@ var PAGES = [
       L("ESBE Incorporated home", "https://esbeincorporated.org/"),
       L("Donate to ESBE Incorporated", "https://esbeincorporated.org/donate")
     ]
+  },
+  {
+    path: "/about",
+    mdPath: "/about.md",
+    title: "About | ESBE Incorporated",
+    h1: "A San Francisco nonprofit built around clarity",
+    description:
+      "About ESBE Incorporated, a 501(c)(3) nonprofit organization based in San Francisco, California: who we are, what we do, and the organization details behind esbeincorporated.org.",
+    aiSummary:
+      "About ESBE Incorporated, a 501(c)(3) nonprofit organization based in San Francisco, California: who we are, what we do, and the organization details behind esbeincorporated.org.",
+    lastUpdated: "2026-11-23",
+    sections: [
+      {
+        heading: "Who we are",
+        paragraphs: [
+          "ESBE Incorporated is a 501(c)(3) nonprofit organization based in San Francisco, California. It builds practical tools and clear information for veterans and people navigating government-facing services.",
+          "The organization was founded by Barklee Sanders, who leads it as chief executive. ESBE Incorporated is independent and does not speak for or act on behalf of any government agency."
+        ]
+      },
+      {
+        heading: "Organization details",
+        facts: [
+          ["Organization", "ESBE Incorporated"],
+          ["Federal status", "501(c)(3) nonprofit organization"],
+          ["Federal tax exemption effective", "May 1, 2026"],
+          ["California corporation number", "C4752548"],
+          ["Registered address", "1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158"],
+          ["Chief executive", "Barklee Sanders"],
+          ["Government relationship", "Independent nonprofit; not a government agency."]
+        ],
+        links: [
+          L("Read the IRS determination letter", DETERMINATION_LETTER),
+          L("Search the IRS Tax Exempt Organization Search", "https://apps.irs.gov/app/eos/")
+        ]
+      },
+      {
+        heading: "What we do",
+        paragraphs: [
+          "Our work has two parts: AIVA Claims, free donor-funded help that helps veterans prepare VA disability claims they file themselves; and public-interest services \u2014 accessible technology and plain-language information that help people understand and use government-facing services."
+        ],
+        links: [
+          L("Programs and services", "https://esbeincorporated.org/programs"),
+          L("How to file a VA disability claim \u2014 a step-by-step guide", "https://esbeincorporated.org/va-claim-guide"),
+          L("Community \u2014 Treasure Island community work", "https://esbeincorporated.org/community")
+        ]
+      },
+      {
+        heading: "Transparency",
+        paragraphs: [
+          "ESBE Incorporated publishes its organization details, its IRS determination letter, and its program relationships on this site so anyone can verify who operates esbeincorporated.org and aivaclaims.com.",
+          DISCLOSURE
+        ],
+        links: [
+          L("Request governance or filing information", "mailto:help@esbeincorporated.org?subject=ESBE%20Incorporated%20transparency%20request")
+        ]
+      }
+    ],
+    related: [
+      L("Programs and services", "https://esbeincorporated.org/programs"),
+      L("Contact ESBE Incorporated", "https://esbeincorporated.org/contact"),
+      L("Donate to ESBE Incorporated", "https://esbeincorporated.org/donate")
+    ]
+  },
+  {
+    path: "/programs",
+    mdPath: "/programs.md",
+    title: "Programs & Services | ESBE Incorporated",
+    h1: "Programs that help people move forward",
+    description:
+      "ESBE Incorporated's programs and services: AIVA Claims, free donor-funded help preparing VA disability claims; public-interest services; and independent civic projects.",
+    aiSummary:
+      "ESBE Incorporated's programs and services: AIVA Claims, free donor-funded help preparing VA disability claims; public-interest services; and independent civic projects.",
+    lastUpdated: "2026-11-23",
+    sections: [
+      {
+        heading: "AIVA Claims (veteran support)",
+        paragraphs: [
+          "AIVA Claims is ESBE Incorporated's veteran support program. It helps veterans understand and prepare VA disability claims at no cost to them; the work is funded by donations.",
+          "AIVA Claims helps a veteran organize records, understand the claims process, and prepare claim materials. Veterans review, edit, and file everything themselves with the U.S. Department of Veterans Affairs \u2014 AIVA Claims does not file claims with the VA, and ESBE Incorporated is not affiliated with the VA."
+        ],
+        bullets: [
+          "Create your free account",
+          "Upload your records",
+          "Review your draft claim package",
+          "File it yourself with the VA"
+        ],
+        links: [
+          L("AIVA Claims \u2014 create your free account", "https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&utm_medium=nonprofit_site&utm_campaign=programs_cta"),
+          L("How to file a VA disability claim \u2014 a step-by-step guide", "https://esbeincorporated.org/va-claim-guide"),
+          L("Nexus letters \u2014 what they are and when a claim needs one", "https://esbeincorporated.org/nexus-letter")
+        ]
+      },
+      {
+        heading: "Public-interest services",
+        paragraphs: [
+          "Accessible technology and plain-language information that help people understand and use government-facing services.",
+          "This work includes the public guides published on this site and the civic projects below."
+        ]
+      },
+      {
+        heading: "Selected civic projects",
+        paragraphs: [
+          "These independent public projects make government-facing information and reporting paths more understandable. They do not represent or act for a government agency."
+        ],
+        links: [
+          L("Hospital Ledger", "https://hospitalledger.com"),
+          L("San Francisco Permit Navigator", "https://sf-permit-navigator.barkleesanders.workers.dev/"),
+          L("ImproveBayArea", "https://improvebayarea.com"),
+          L("National Park Service Report", "https://improvebayarea.com/nps-report"),
+          L("San Francisco Income Verify", "https://sf-income-verify.barkleesanders.workers.dev/"),
+          L("Treasure Island Power", "https://treasureislandsfpoweroutages.com")
+        ]
+      },
+      {
+        heading: "Community work",
+        paragraphs: [
+          "ESBE Incorporated supports public documentation and accountability work for Treasure Island residents, including the Treasure Island Power outage tracker."
+        ],
+        links: [
+          L("Community \u2014 Treasure Island community work", "https://esbeincorporated.org/community")
+        ]
+      },
+      {
+        heading: "Transparency",
+        facts: [
+          ["Organization", "ESBE Incorporated"],
+          ["Federal status", "501(c)(3) nonprofit organization"],
+          ["Registered address", "1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158"],
+          ["Program relationship", "AIVA Claims is a program of ESBE Incorporated."]
+        ],
+        links: [
+          L("Read the IRS determination letter", DETERMINATION_LETTER)
+        ]
+      }
+    ],
+    related: [
+      L("About ESBE Incorporated", "https://esbeincorporated.org/about"),
+      L("Contact ESBE Incorporated", "https://esbeincorporated.org/contact"),
+      L("Donate to ESBE Incorporated", "https://esbeincorporated.org/donate")
+    ]
+  },
+  {
+    path: "/contact",
+    mdPath: "/contact.md",
+    title: "Contact | ESBE Incorporated",
+    h1: "Contact ESBE Incorporated",
+    description:
+      "Contact ESBE Incorporated: email, phone, and the registered mailing address for public inquiries, governance requests, and nonprofit correspondence.",
+    aiSummary:
+      "Contact ESBE Incorporated: email, phone, and the registered mailing address for public inquiries, governance requests, and nonprofit correspondence.",
+    lastUpdated: "2026-11-23",
+    sections: [
+      {
+        heading: "How to reach us",
+        paragraphs: [
+          "For public inquiries, governance requests, and nonprofit correspondence, reach us by email or phone.",
+          "Email: help@esbeincorporated.org \xB7 Phone: (802) 715-3723",
+          "Mailing and registered address: ESBE Incorporated, 1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158."
+        ],
+        links: [
+          L("Email ESBE Incorporated", "mailto:help@esbeincorporated.org"),
+          L("Request governance or filing information", "mailto:help@esbeincorporated.org?subject=ESBE%20Incorporated%20transparency%20request")
+        ]
+      },
+      {
+        heading: "AIVA Claims support",
+        paragraphs: [
+          "AIVA Claims is a program of ESBE Incorporated. For help with an AIVA Claims account or with a claim you are preparing, start at AIVA Claims."
+        ],
+        links: [
+          L("AIVA Claims", "https://aivaclaims.com"),
+          L("AIVA Claims \u2014 create your free account", "https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&utm_medium=nonprofit_site&utm_campaign=programs_cta")
+        ]
+      },
+      {
+        heading: "Organization details",
+        facts: [
+          ["Organization", "ESBE Incorporated"],
+          ["Federal status", "501(c)(3) nonprofit organization"],
+          ["Registered address", "1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158"]
+        ],
+        links: [
+          L("Read the IRS determination letter", DETERMINATION_LETTER)
+        ]
+      }
+    ],
+    related: [
+      L("About ESBE Incorporated", "https://esbeincorporated.org/about"),
+      L("Programs and services", "https://esbeincorporated.org/programs"),
+      L("Donate to ESBE Incorporated", "https://esbeincorporated.org/donate")
+    ]
   }
 ];
 var esc = /* @__PURE__ */ __name((s) => String(s).replace(/\|/g, "\\|"), "esc");
@@ -2984,7 +3179,7 @@ app.get(
     <title>ESBE Incorporated | Veteran support and public-interest work</title>
     <meta name="ai-summary" content="ESBE Incorporated is a 501(c)(3) nonprofit (EIN 87-1218291) advancing veteran support \u2014 through its AIVA Claims program, which helps veterans prepare VA disability claims for free \u2014 and public-interest access to government-facing services." />
     <link rel="alternate" type="text/markdown" href="https://esbeincorporated.org/index.md" />
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"ESBE Incorporated","url":"https://esbeincorporated.org/","taxID":"87-1218291","email":"help@esbeincorporated.org","contactPoint":[{"@type":"ContactPoint","contactType":"public inquiries and governance requests","email":"help@esbeincorporated.org","url":"https://esbeincorporated.org/#contact"}],"sameAs":["${determinationLetter}"]}<\/script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"ESBE Incorporated","url":"https://esbeincorporated.org/","taxID":"87-1218291","email":"help@esbeincorporated.org","address":{"@type":"PostalAddress","streetAddress":"1070 Bridgeview Way, Apt 1010","addressLocality":"San Francisco","addressRegion":"CA","postalCode":"94158","addressCountry":"US"},"contactPoint":[{"@type":"ContactPoint","contactType":"public inquiries and governance requests","email":"help@esbeincorporated.org","url":"https://esbeincorporated.org/#contact"}],"sameAs":["${determinationLetter}"]}<\/script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"ESBE Incorporated","url":"https://esbeincorporated.org/","publisher":{"@type":"NGO","name":"ESBE Incorporated","url":"https://esbeincorporated.org/"}}<\/script>
   </head>
   <body>
@@ -2992,7 +3187,7 @@ app.get(
     <header class="site-header">
       <a class="wordmark" href="/" aria-label="ESBE Incorporated home">ESBE <span>INC.</span></a>
       <nav aria-label="Primary navigation">
-        <a href="#mission">Mission</a><a href="#programs">Programs</a><a href="/community">Community</a><a href="/donate">Donate</a><a href="#transparency">Transparency</a><a href="#contact">Contact</a>
+        <a href="#mission">Mission</a><a href="/about">About</a><a href="/programs">Programs</a><a href="/community">Community</a><a href="/donate">Donate</a><a href="#transparency">Transparency</a><a href="/contact">Contact</a>
       </nav>
       <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">AIVA Claims — free help for veterans <span aria-hidden="true">\u2197</span></a>
     </header>
@@ -3053,16 +3248,16 @@ app.get(
 
       <section class="transparency" id="transparency" aria-labelledby="transparency-title">
         <div class="section-heading"><div><p class="section-mark">03</p><a class="permalink" href="#transparency" aria-label="Copy link to transparency">#</a></div><div><p class="eyebrow">TRANSPARENCY</p><h2 id="transparency-title">Clear identity. Clear accountability.</h2></div></div>
-        <dl class="facts"><div><dt>Organization</dt><dd>ESBE Incorporated</dd></div><div><dt>Federal tax ID</dt><dd>87-1218291</dd></div><div><dt>Federal status</dt><dd>501(c)(3) nonprofit organization</dd></div><div><dt>Public purpose</dt><dd>Veteran support and public-interest access to government-facing services.</dd></div><div><dt>Program relationship</dt><dd>AIVA Claims is a program of ESBE Incorporated.</dd></div><div><dt>Government relationship</dt><dd>Independent nonprofit; not a government agency.</dd></div></dl>
+        <dl class="facts"><div><dt>Organization</dt><dd>ESBE Incorporated</dd></div><div><dt>Federal tax ID</dt><dd>87-1218291</dd></div><div><dt>Federal status</dt><dd>501(c)(3) nonprofit organization</dd></div><div><dt>Registered address</dt><dd>1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</dd></div><div><dt>Public purpose</dt><dd>Veteran support and public-interest access to government-facing services.</dd></div><div><dt>Program relationship</dt><dd>AIVA Claims is a program of ESBE Incorporated.</dd></div><div><dt>Government relationship</dt><dd>Independent nonprofit; not a government agency.</dd></div></dl>
         <div class="transparency-links"><a href="${determinationLetter}" rel="noreferrer">Read the IRS determination letter <span aria-hidden="true">\u2197</span></a><a href="https://apps.irs.gov/app/eos/" rel="noreferrer">Search the IRS Tax Exempt Organization Search <span aria-hidden="true">\u2197</span></a><a href="mailto:help@esbeincorporated.org?subject=ESBE%20Incorporated%20transparency%20request">Request governance or filing information <span aria-hidden="true">\u2197</span></a></div>
       </section>
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
         <div><p class="section-mark">04</p><a class="permalink" href="#contact" aria-label="Copy link to contact">#</a></div>
-        <div><p class="eyebrow">PUBLIC CONTACT</p><h2 id="contact-title">Contact ESBE Incorporated.</h2><p class="contact-copy">For public inquiries, governance requests, and nonprofit correspondence, reach us by email or phone.</p><div class="contact-details"><a class="contact-email" href="mailto:help@esbeincorporated.org">help@esbeincorporated.org <span aria-hidden="true">\u2197</span></a><a class="contact-phone" href="tel:+18027153723">(802) 715-3723</a></div></div>
+        <div><p class="eyebrow">PUBLIC CONTACT</p><h2 id="contact-title">Contact ESBE Incorporated.</h2><p class="contact-copy">For public inquiries, governance requests, and nonprofit correspondence, reach us by email or phone.</p><div class="contact-details"><a class="contact-email" href="mailto:help@esbeincorporated.org">help@esbeincorporated.org <span aria-hidden="true">\u2197</span></a><a class="contact-phone" href="tel:+18027153723">(802) 715-3723</a></div><p class="contact-address">Registered address: 1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</p></div>
       </section>
     </main>
-    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="#mission">Back to top \u2191</a></div></footer>
+    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><p>Registered address: 1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="#mission">Back to top \u2191</a></div></footer>
     <script type="module" src="/webmcp-tools.js"><\/script>
     <script type="module" src="/webmcp.js"><\/script>
     <script type="module" src="/ads.js"><\/script>
@@ -3116,7 +3311,7 @@ app.get(
     <header class="site-header">
       <a class="wordmark" href="/" aria-label="ESBE Incorporated home">ESBE <span>INC.</span></a>
       <nav aria-label="Primary navigation">
-        <a href="/#mission">Mission</a><a href="/#programs">Programs</a><a href="/donate" aria-current="page">Donate</a><a href="/#transparency">Transparency</a><a href="/#contact">Contact</a>
+        <a href="/#mission">Mission</a><a href="/about">About</a><a href="/programs">Programs</a><a href="/community">Community</a><a href="/donate" aria-current="page">Donate</a><a href="/#transparency">Transparency</a><a href="/contact">Contact</a>
       </nav>
       <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">AIVA Claims — free help for veterans <span aria-hidden="true">\u2197</span></a>
     </header>
@@ -3155,11 +3350,11 @@ app.get(
 
       <section class="transparency" id="donate-transparency" aria-labelledby="donate-transparency-title">
         <div class="section-heading"><div><p class="section-mark">02</p><a class="permalink" href="#donate-transparency" aria-label="Copy link to transparency">#</a></div><div><p class="eyebrow">TRANSPARENCY</p><h2 id="donate-transparency-title">Give with the facts in front of you.</h2></div></div>
-        <dl class="facts"><div><dt>Organization</dt><dd>ESBE Incorporated</dd></div><div><dt>Federal tax ID</dt><dd>87-1218291</dd></div><div><dt>Federal status</dt><dd>501(c)(3) nonprofit organization</dd></div><div><dt>CA charity registration</dt><dd>CT0403243</dd></div><div><dt>Giving processed by</dt><dd>Every.org</dd></div><div><dt>Program relationship</dt><dd>AIVA Claims is a program of ESBE Incorporated.</dd></div></dl>
+        <dl class="facts"><div><dt>Organization</dt><dd>ESBE Incorporated</dd></div><div><dt>Federal tax ID</dt><dd>87-1218291</dd></div><div><dt>Federal status</dt><dd>501(c)(3) nonprofit organization</dd></div><div><dt>Registered address</dt><dd>1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</dd></div><div><dt>CA charity registration</dt><dd>CT0403243</dd></div><div><dt>Giving processed by</dt><dd>Every.org</dd></div><div><dt>Program relationship</dt><dd>AIVA Claims is a program of ESBE Incorporated.</dd></div></dl>
         <div class="transparency-links"><a href="${determinationLetter}" rel="noreferrer">Read the IRS determination letter <span aria-hidden="true">\u2197</span></a><a href="https://apps.irs.gov/app/eos/" rel="noreferrer">Search the IRS Tax Exempt Organization Search <span aria-hidden="true">\u2197</span></a><a href="mailto:help@esbeincorporated.org?subject=ESBE%20Incorporated%20sponsorship%20or%20grant%20inquiry">Ask about sponsorships and grants <span aria-hidden="true">\u2197</span></a></div>
       </section>
     </main>
-    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
+    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><p>Registered address: 1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
     <script type="module" src="/webmcp-tools.js"><\/script>
     <script type="module" src="/webmcp.js"><\/script>
     <script type="module" src="/ads.js"><\/script>
@@ -3216,7 +3411,7 @@ app.get(
     <header class="site-header">
       <a class="wordmark" href="/" aria-label="ESBE Incorporated home">ESBE <span>INC.</span></a>
       <nav aria-label="Primary navigation">
-        <a href="/#mission">Mission</a><a href="/#programs">Programs</a><a href="/community">Community</a><a href="/donate">Donate</a><a href="/#transparency">Transparency</a><a href="/#contact">Contact</a>
+        <a href="/#mission">Mission</a><a href="/about">About</a><a href="/programs">Programs</a><a href="/community">Community</a><a href="/donate">Donate</a><a href="/#transparency">Transparency</a><a href="/contact">Contact</a>
       </nav>
       <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">AIVA Claims — free help for veterans <span aria-hidden="true">↗</span></a>
     </header>
@@ -3292,11 +3487,11 @@ app.get(
 
       <section class="transparency" aria-labelledby="guide-transparency-title">
         <div class="section-heading"><div><p class="section-mark">08</p></div><div><p class="eyebrow">TRANSPARENCY</p><h2 id="guide-transparency-title">Clear identity. Clear accountability.</h2></div></div>
-        <dl class="facts"><div><dt>Organization</dt><dd>ESBE Incorporated</dd></div><div><dt>Federal tax ID</dt><dd>87-1218291</dd></div><div><dt>Federal status</dt><dd>501(c)(3) nonprofit organization</dd></div><div><dt>Program relationship</dt><dd>AIVA Claims is a program of ESBE Incorporated.</dd></div><div><dt>Government relationship</dt><dd>Independent nonprofit; not a government agency.</dd></div></dl>
+        <dl class="facts"><div><dt>Organization</dt><dd>ESBE Incorporated</dd></div><div><dt>Federal tax ID</dt><dd>87-1218291</dd></div><div><dt>Federal status</dt><dd>501(c)(3) nonprofit organization</dd></div><div><dt>Registered address</dt><dd>1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</dd></div><div><dt>Program relationship</dt><dd>AIVA Claims is a program of ESBE Incorporated.</dd></div><div><dt>Government relationship</dt><dd>Independent nonprofit; not a government agency.</dd></div></dl>
         <div class="transparency-links"><a href="${determinationLetter}" rel="noreferrer">Read the IRS determination letter <span aria-hidden="true">\u2197</span></a><a href="mailto:help@esbeincorporated.org?subject=ESBE%20Incorporated%20VA%20claim%20guide%20inquiry">Contact us about this guide <span aria-hidden="true">\u2197</span></a></div>
       </section>
     </main>
-    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
+    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><p>Registered address: 1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
     <script type="module" src="/webmcp-tools.js"><\/script>
     <script type="module" src="/webmcp.js"><\/script>
     <script type="module" src="/ads.js"><\/script>
@@ -3351,7 +3546,7 @@ app.get(
     <header class="site-header">
       <a class="wordmark" href="/" aria-label="ESBE Incorporated home">ESBE <span>INC.</span></a>
       <nav aria-label="Primary navigation">
-        <a href="/#mission">Mission</a><a href="/#programs">Programs</a><a href="/community">Community</a><a href="/donate">Donate</a><a href="/#transparency">Transparency</a><a href="/#contact">Contact</a>
+        <a href="/#mission">Mission</a><a href="/about">About</a><a href="/programs">Programs</a><a href="/community">Community</a><a href="/donate">Donate</a><a href="/#transparency">Transparency</a><a href="/contact">Contact</a>
       </nav>
       <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">AIVA Claims — free help for veterans <span aria-hidden="true">↗</span></a>
     </header>
@@ -3415,11 +3610,317 @@ app.get(
 
       <section class="transparency" aria-labelledby="nexus-transparency-title">
         <div class="section-heading"><div><p class="section-mark">06</p></div><div><p class="eyebrow">TRANSPARENCY</p><h2 id="nexus-transparency-title">Clear identity. Clear accountability.</h2></div></div>
-        <dl class="facts"><div><dt>Organization</dt><dd>ESBE Incorporated</dd></div><div><dt>Federal tax ID</dt><dd>87-1218291</dd></div><div><dt>Federal status</dt><dd>501(c)(3) nonprofit organization</dd></div><div><dt>Program relationship</dt><dd>AIVA Claims is a program of ESBE Incorporated.</dd></div><div><dt>Government relationship</dt><dd>Independent nonprofit; not a government agency.</dd></div></dl>
+        <dl class="facts"><div><dt>Organization</dt><dd>ESBE Incorporated</dd></div><div><dt>Federal tax ID</dt><dd>87-1218291</dd></div><div><dt>Federal status</dt><dd>501(c)(3) nonprofit organization</dd></div><div><dt>Registered address</dt><dd>1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</dd></div><div><dt>Program relationship</dt><dd>AIVA Claims is a program of ESBE Incorporated.</dd></div><div><dt>Government relationship</dt><dd>Independent nonprofit; not a government agency.</dd></div></dl>
         <div class="transparency-links"><a href="${determinationLetter}" rel="noreferrer">Read the IRS determination letter <span aria-hidden="true">\u2197</span></a><a href="mailto:help@esbeincorporated.org?subject=ESBE%20Incorporated%20nexus%20letter%20inquiry">Contact us about this page <span aria-hidden="true">\u2197</span></a></div>
       </section>
     </main>
-    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
+    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><p>Registered address: 1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
+    <script type="module" src="/webmcp-tools.js"><\/script>
+    <script type="module" src="/webmcp.js"><\/script>
+    <script type="module" src="/ads.js"><\/script>
+  </body>
+</html>`)
+);
+
+app.get(
+  "/about",
+  (c) => c.html(`<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="origin-trial" content="Ao5nDCDm2tvUfzXnC/aV33kcMX+6hDKLhD8R9Ct87pY2EtvcO9hXQne2NtkkFZM/hEeii6M4k7HWt+62WnZoCw8AAABUeyJvcmlnaW4iOiJodHRwczovL2VzYmVpbmNvcnBvcmF0ZWQub3JnOjQ0MyIsImZlYXR1cmUiOiJXZWJNQ1AiLCJleHBpcnkiOjE4MDYzNjQ4MDB9">
+    <link rel="webmcp" href="/.well-known/webmcp.json" type="application/json">
+    <!-- Google tag (gtag.js) - GA4 ESBE Incorporated -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLVSKGE4LT"><\/script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YLVSKGE4LT');
+      gtag('config', 'AW-18515418870');
+    <\/script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="About ESBE Incorporated, a 501(c)(3) nonprofit organization based in San Francisco, California: who we are, what we do, and the organization details behind esbeincorporated.org." />
+    <meta name="theme-color" content="#12352d" />
+    <link rel="canonical" href="https://esbeincorporated.org/about" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ESBE Incorporated" />
+    <meta property="og:title" content="About | ESBE Incorporated" />
+    <meta property="og:description" content="About ESBE Incorporated, a 501(c)(3) nonprofit organization based in San Francisco, California: who we are, what we do, and the organization details behind esbeincorporated.org." />
+    <meta property="og:url" content="https://esbeincorporated.org/about" />
+    <meta property="og:image" content="https://esbeincorporated.org/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About | ESBE Incorporated" />
+    <meta name="twitter:description" content="About ESBE Incorporated, a 501(c)(3) nonprofit organization based in San Francisco, California: who we are, what we do, and the organization details behind esbeincorporated.org." />
+    <meta name="twitter:image" content="https://esbeincorporated.org/og.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>About | ESBE Incorporated</title>
+    <meta name="ai-summary" content="About ESBE Incorporated, a 501(c)(3) nonprofit organization based in San Francisco, California: who we are, what we do, and the organization details behind esbeincorporated.org." />
+    <link rel="alternate" type="text/markdown" href="https://esbeincorporated.org/about.md" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"ESBE Incorporated","url":"https://esbeincorporated.org/","taxID":"87-1218291","email":"help@esbeincorporated.org","sameAs":["${determinationLetter}"]}<\/script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://esbeincorporated.org/"},{"@type":"ListItem","position":2,"name":"About","item":"https://esbeincorporated.org/about"}]}<\/script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="ESBE Incorporated home">ESBE <span>INC.</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="/#mission">Mission</a><a href="/about" aria-current="page">About</a><a href="/programs">Programs</a><a href="/community">Community</a><a href="/donate">Donate</a><a href="/#transparency">Transparency</a><a href="/contact">Contact</a>
+      </nav>
+      <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">AIVA Claims — free help for veterans <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="main">
+      <nav aria-label="Breadcrumb" class="breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">About</li></ol></nav>
+      <section class="hero" aria-labelledby="about-title">
+        <p class="eyebrow">ABOUT \u2022 SAN FRANCISCO \u2022 NONPROFIT</p>
+        <div class="hero-grid">
+          <h1 id="about-title">A San Francisco nonprofit built around clarity.</h1>
+          <div class="hero-copy">
+            <p>ESBE Incorporated is a 501(c)(3) nonprofit organization based in San Francisco, California. It builds practical tools and clear information for veterans and people navigating government-facing services.</p>
+            <div class="hero-actions"><a class="button primary" href="/programs">See our programs <span aria-hidden="true">\u2197</span></a><a class="text-link" href="#details">Organization details <span aria-hidden="true">\u2193</span></a></div>
+          </div>
+        </div>
+        <div class="hero-rule" aria-hidden="true"></div>
+        <p class="hero-note">ESBE Incorporated is an independent nonprofit. It is not a government agency and does not speak for the U.S. Department of Veterans Affairs.</p>
+      </section>
+      <section class="statement" id="who" aria-labelledby="who-title">
+        <div><p class="section-mark">01</p><a class="permalink" href="#who" aria-label="Copy link to who we are">#</a></div>
+        <div><p class="eyebrow">WHO WE ARE</p><h2 id="who-title">Founded to make hard processes understandable.</h2></div>
+        <p class="body-large">The organization was founded by Barklee Sanders, who leads it as chief executive. Its work starts from a simple observation: people lose time, money, and benefits when government-facing processes are hard to understand \u2014 so it builds the tools and explanations that make those processes clear.</p>
+      </section>
+      <section class="transparency" id="details" aria-labelledby="details-title">
+        <div class="section-heading"><div><p class="section-mark">02</p></div><div><p class="eyebrow">ORGANIZATION DETAILS</p><h2 id="details-title">The details behind this site.</h2></div></div>
+        <dl class="facts"><div><dt>Organization</dt><dd>ESBE Incorporated</dd></div><div><dt>Federal status</dt><dd>501(c)(3) nonprofit organization</dd></div><div><dt>Federal tax exemption effective</dt><dd>May 1, 2026</dd></div><div><dt>California corporation number</dt><dd>C4752548</dd></div><div><dt>Registered address</dt><dd>1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</dd></div><div><dt>Chief executive</dt><dd>Barklee Sanders</dd></div><div><dt>Government relationship</dt><dd>Independent nonprofit; not a government agency.</dd></div></dl>
+        <div class="transparency-links"><a href="${determinationLetter}">Read the IRS determination letter <span aria-hidden="true">\u2197</span></a><a href="https://apps.irs.gov/app/eos/">Search the IRS Tax Exempt Organization Search <span aria-hidden="true">\u2197</span></a></div>
+      </section>
+      <section class="programs" id="what" aria-labelledby="what-title">
+        <div class="section-heading"><div><p class="section-mark">03</p><a class="permalink" href="#what" aria-label="Copy link to what we do">#</a></div><div><p class="eyebrow">WHAT WE DO</p><h2 id="what-title">Two kinds of work.</h2></div></div>
+        <div class="program-grid">
+          <article class="program-card featured-program" id="aiva-claims">
+            <div class="program-top"><p class="program-kicker">VETERAN SUPPORT</p><span>01</span></div>
+            <div class="featured-body">
+              <div>
+                <h3>AIVA Claims</h3>
+                <p>Free, donor-funded help preparing your VA disability claim. You review, edit, and file everything yourself.</p>
+                <div class="program-actions"><a class="button light" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=programs_cta">Create your free account <span aria-hidden="true">\u2192</span></a></div>
+                <p class="program-guides">New to VA claims? Start with <a href="/va-claim-guide">how to file a VA disability claim</a>, or learn <a href="/nexus-letter">what a nexus letter is</a>.</p>
+              </div>
+              <ol class="program-steps"><li>Upload your records</li><li>Review your draft claim package</li><li>File it yourself with the VA</li></ol>
+            </div>
+            <p class="program-assurance">No cost to veterans \xB7 501(c)(3) nonprofit, EIN 87-1218291 \xB7 Not affiliated with the U.S. Department of Veterans Affairs</p>
+          </article>
+          <article class="program-card public-interest-card">
+            <div class="program-top"><p class="program-kicker">CIVIC ACCESS</p><span>02</span></div>
+            <div class="program-content"><div><h3>Public-interest services</h3><p>Accessible technology and plain-language information that help people understand and use government-facing services.</p></div></div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><p>Registered address: 1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
+    <script type="module" src="/webmcp-tools.js"><\/script>
+    <script type="module" src="/webmcp.js"><\/script>
+    <script type="module" src="/ads.js"><\/script>
+  </body>
+</html>`)
+);
+
+app.get(
+  "/programs",
+  (c) => c.html(`<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="origin-trial" content="Ao5nDCDm2tvUfzXnC/aV33kcMX+6hDKLhD8R9Ct87pY2EtvcO9hXQne2NtkkFZM/hEeii6M4k7HWt+62WnZoCw8AAABUeyJvcmlnaW4iOiJodHRwczovL2VzYmVpbmNvcnBvcmF0ZWQub3JnOjQ0MyIsImZlYXR1cmUiOiJXZWJNQ1AiLCJleHBpcnkiOjE4MDYzNjQ4MDB9">
+    <link rel="webmcp" href="/.well-known/webmcp.json" type="application/json">
+    <!-- Google tag (gtag.js) - GA4 ESBE Incorporated -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLVSKGE4LT"><\/script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YLVSKGE4LT');
+      gtag('config', 'AW-18515418870');
+    <\/script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ESBE Incorporated's programs and services: AIVA Claims, free donor-funded help preparing VA disability claims; public-interest services; and independent civic projects." />
+    <meta name="theme-color" content="#12352d" />
+    <link rel="canonical" href="https://esbeincorporated.org/programs" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ESBE Incorporated" />
+    <meta property="og:title" content="Programs & Services | ESBE Incorporated" />
+    <meta property="og:description" content="ESBE Incorporated's programs and services: AIVA Claims, free donor-funded help preparing VA disability claims; public-interest services; and independent civic projects." />
+    <meta property="og:url" content="https://esbeincorporated.org/programs" />
+    <meta property="og:image" content="https://esbeincorporated.org/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Programs & Services | ESBE Incorporated" />
+    <meta name="twitter:description" content="ESBE Incorporated's programs and services: AIVA Claims, free donor-funded help preparing VA disability claims; public-interest services; and independent civic projects." />
+    <meta name="twitter:image" content="https://esbeincorporated.org/og.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Programs & Services | ESBE Incorporated</title>
+    <meta name="ai-summary" content="ESBE Incorporated's programs and services: AIVA Claims, free donor-funded help preparing VA disability claims; public-interest services; and independent civic projects." />
+    <link rel="alternate" type="text/markdown" href="https://esbeincorporated.org/programs.md" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"ESBE Incorporated","url":"https://esbeincorporated.org/","taxID":"87-1218291","email":"help@esbeincorporated.org","sameAs":["${determinationLetter}"]}<\/script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://esbeincorporated.org/"},{"@type":"ListItem","position":2,"name":"Programs","item":"https://esbeincorporated.org/programs"}]}<\/script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="ESBE Incorporated home">ESBE <span>INC.</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="/#mission">Mission</a><a href="/about">About</a><a href="/programs" aria-current="page">Programs</a><a href="/community">Community</a><a href="/donate">Donate</a><a href="/#transparency">Transparency</a><a href="/contact">Contact</a>
+      </nav>
+      <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">AIVA Claims — free help for veterans <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="main">
+      <nav aria-label="Breadcrumb" class="breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Programs</li></ol></nav>
+      <section class="hero" aria-labelledby="programs-title">
+        <p class="eyebrow">PROGRAMS \u2022 VETERAN SUPPORT \u2022 CIVIC ACCESS</p>
+        <div class="hero-grid">
+          <h1 id="programs-title">Programs that help people move forward.</h1>
+          <div class="hero-copy">
+            <p>ESBE Incorporated runs AIVA Claims, free donor-funded help that helps veterans prepare VA disability claims they file themselves, and public-interest services that make government-facing systems easier to understand.</p>
+            <div class="hero-actions"><a class="button primary" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=programs_cta">Create your free AIVA Claims account <span aria-hidden="true">\u2197</span></a><a class="text-link" href="#aiva-claims">How AIVA Claims works <span aria-hidden="true">\u2193</span></a></div>
+          </div>
+        </div>
+        <div class="hero-rule" aria-hidden="true"></div>
+        <p class="hero-note">AIVA Claims does not file claims with the VA. Veterans review, edit, and file everything themselves with the U.S. Department of Veterans Affairs.</p>
+      </section>
+      <section class="programs" id="programs-list" aria-labelledby="programs-list-title">
+        <div class="section-heading"><div><p class="section-mark">01</p><a class="permalink" href="#programs-list" aria-label="Copy link to programs and services">#</a></div><div><p class="eyebrow">PROGRAMS AND SERVICES</p><h2 id="programs-list-title">What ESBE Incorporated runs.</h2></div></div>
+        <div class="program-grid">
+          <article class="program-card featured-program" id="aiva-claims">
+            <div class="program-top"><p class="program-kicker">VETERAN SUPPORT</p><span>01</span></div>
+            <div class="featured-body">
+              <div>
+                <h3>AIVA Claims</h3>
+                <p>Free, donor-funded help preparing your VA disability claim. You review, edit, and file everything yourself.</p>
+                <div class="program-actions"><a class="button light" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=programs_cta">Create your free account <span aria-hidden="true">\u2192</span></a></div>
+                <p class="program-guides">New to VA claims? Start with <a href="/va-claim-guide">how to file a VA disability claim</a>, or learn <a href="/nexus-letter">what a nexus letter is</a>.</p>
+              </div>
+              <ol class="program-steps"><li>Upload your records</li><li>Review your draft claim package</li><li>File it yourself with the VA</li></ol>
+            </div>
+            <p class="program-assurance">No cost to veterans \xB7 501(c)(3) nonprofit, EIN 87-1218291 \xB7 Not affiliated with the U.S. Department of Veterans Affairs</p>
+          </article>
+          <article class="program-card public-interest-card">
+            <div class="program-top"><p class="program-kicker">CIVIC ACCESS</p><span>02</span></div>
+            <div class="program-content"><div><h3>Public-interest services</h3><p>Accessible technology and plain-language information that help people understand and use government-facing services.</p></div></div>
+          </article>
+        </div>
+        <section class="civic-projects" aria-labelledby="civic-projects-title">
+          <div class="civic-projects-heading"><div><p class="program-kicker">SELECTED CIVIC PROJECTS</p><h3 id="civic-projects-title">Public tools for public systems.</h3></div><p>These independent public projects make government-facing information and reporting paths more understandable. They do not represent or act for a government agency.</p></div>
+          <div class="civic-project-grid">
+            <article class="civic-project"><p class="civic-project-meta">FEDERAL TRANSPARENCY \xB7 LIVE</p><h4>Hospital Ledger</h4><p>A public-good resource for exploring hospital price files published under federal transparency requirements.</p><a href="https://hospitalledger.com" rel="noreferrer">Visit Hospital Ledger <span aria-hidden="true">\u2197</span></a></article>
+            <article class="civic-project"><p class="civic-project-meta">SAN FRANCISCO PERMITS \xB7 PROTOTYPE</p><h4>SF Permit Navigator</h4><p>A plain-language permit-path prototype that identifies where an official city system is required.</p><a href="https://sf-permit-detector.barkleesanders.workers.dev" rel="noreferrer">Visit SF Permit Navigator <span aria-hidden="true">\u2197</span></a></article>
+            <article class="civic-project"><p class="civic-project-meta">BAY AREA 311 \xB7 LIVE</p><h4>ImproveBayArea</h4><p>One public reporting form that routes Bay Area requests to the appropriate official 311 service.</p><a href="https://improvebayarea.com" rel="noreferrer">Visit ImproveBayArea <span aria-hidden="true">\u2197</span></a></article>
+            <article class="civic-project"><p class="civic-project-meta">NATIONAL PARKS \xB7 LIVE</p><h4>NPS Report</h4><p>A public tool for reporting maintenance and safety concerns through National Park Service contact paths.</p><a href="https://nps-report.barkleesanders.workers.dev" rel="noreferrer">Visit NPS Report <span aria-hidden="true">\u2197</span></a></article>
+            <article class="civic-project"><p class="civic-project-meta">SF AFFORDABLE HOUSING \xB7 PROTOTYPE</p><h4>SF Income Verify</h4><p>A privacy-first income-verification prototype for San Francisco affordable housing. Not affiliated with MOHCD.</p><a href="https://sf-income-verify.barkleesanders.workers.dev/#how-it-works" rel="noreferrer">Visit SF Income Verify <span aria-hidden="true">\u2197</span></a></article>
+            <article class="civic-project"><p class="civic-project-meta">PUBLIC INFRASTRUCTURE \xB7 LIVE</p><h4>Treasure Island Power</h4><p>A public outage tracker documenting Treasure Island power failures and related accountability work.</p><a href="https://www.treasureislandsfpoweroutages.com" rel="noreferrer">Visit Treasure Island Power <span aria-hidden="true">\u2197</span></a></article>
+          </div>
+        </section>
+      </section>
+      <section class="statement" id="community-work" aria-labelledby="community-work-title">
+        <div><p class="section-mark">02</p><a class="permalink" href="#community-work" aria-label="Copy link to community work">#</a></div>
+        <div><p class="eyebrow">COMMUNITY WORK</p><h2 id="community-work-title">Accountability work for Treasure Island residents.</h2></div>
+        <p class="body-large">ESBE Incorporated supports public documentation and accountability work for Treasure Island residents, including the <a href="https://treasureislandsfpoweroutages.com">Treasure Island Power</a> outage tracker. Read more about our <a href="/community">community work</a>.</p>
+      </section>
+      <section class="transparency" aria-labelledby="programs-transparency-title">
+        <div class="section-heading"><div><p class="section-mark">03</p></div><div><p class="eyebrow">TRANSPARENCY</p><h2 id="programs-transparency-title">Clear identity. Clear accountability.</h2></div></div>
+        <dl class="facts"><div><dt>Organization</dt><dd>ESBE Incorporated</dd></div><div><dt>Federal status</dt><dd>501(c)(3) nonprofit organization</dd></div><div><dt>Registered address</dt><dd>1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</dd></div><div><dt>Program relationship</dt><dd>AIVA Claims is a program of ESBE Incorporated.</dd></div></dl>
+        <div class="transparency-links"><a href="${determinationLetter}">Read the IRS determination letter <span aria-hidden="true">\u2197</span></a></div>
+      </section>
+    </main>
+    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><p>Registered address: 1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
+    <script type="module" src="/webmcp-tools.js"><\/script>
+    <script type="module" src="/webmcp.js"><\/script>
+    <script type="module" src="/ads.js"><\/script>
+  </body>
+</html>`)
+);
+
+app.get(
+  "/contact",
+  (c) => c.html(`<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="origin-trial" content="Ao5nDCDm2tvUfzXnC/aV33kcMX+6hDKLhD8R9Ct87pY2EtvcO9hXQne2NtkkFZM/hEeii6M4k7HWt+62WnZoCw8AAABUeyJvcmlnaW4iOiJodHRwczovL2VzYmVpbmNvcnBvcmF0ZWQub3JnOjQ0MyIsImZlYXR1cmUiOiJXZWJNQ1AiLCJleHBpcnkiOjE4MDYzNjQ4MDB9">
+    <link rel="webmcp" href="/.well-known/webmcp.json" type="application/json">
+    <!-- Google tag (gtag.js) - GA4 ESBE Incorporated -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLVSKGE4LT"><\/script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YLVSKGE4LT');
+      gtag('config', 'AW-18515418870');
+    <\/script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Contact ESBE Incorporated: email, phone, and the registered mailing address for public inquiries, governance requests, and nonprofit correspondence." />
+    <meta name="theme-color" content="#12352d" />
+    <link rel="canonical" href="https://esbeincorporated.org/contact" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ESBE Incorporated" />
+    <meta property="og:title" content="Contact | ESBE Incorporated" />
+    <meta property="og:description" content="Contact ESBE Incorporated: email, phone, and the registered mailing address for public inquiries, governance requests, and nonprofit correspondence." />
+    <meta property="og:url" content="https://esbeincorporated.org/contact" />
+    <meta property="og:image" content="https://esbeincorporated.org/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact | ESBE Incorporated" />
+    <meta name="twitter:description" content="Contact ESBE Incorporated: email, phone, and the registered mailing address for public inquiries, governance requests, and nonprofit correspondence." />
+    <meta name="twitter:image" content="https://esbeincorporated.org/og.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Contact | ESBE Incorporated</title>
+    <meta name="ai-summary" content="Contact ESBE Incorporated: email, phone, and the registered mailing address for public inquiries, governance requests, and nonprofit correspondence." />
+    <link rel="alternate" type="text/markdown" href="https://esbeincorporated.org/contact.md" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"ESBE Incorporated","url":"https://esbeincorporated.org/","taxID":"87-1218291","email":"help@esbeincorporated.org","sameAs":["${determinationLetter}"]}<\/script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://esbeincorporated.org/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://esbeincorporated.org/contact"}]}<\/script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="ESBE Incorporated home">ESBE <span>INC.</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="/#mission">Mission</a><a href="/about">About</a><a href="/programs">Programs</a><a href="/community">Community</a><a href="/donate">Donate</a><a href="/#transparency">Transparency</a><a href="/contact" aria-current="page">Contact</a>
+      </nav>
+      <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">AIVA Claims — free help for veterans <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="main">
+      <nav aria-label="Breadcrumb" class="breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Contact</li></ol></nav>
+      <section class="hero" aria-labelledby="contact-title">
+        <p class="eyebrow">CONTACT \u2022 PUBLIC INQUIRIES \u2022 GOVERNANCE</p>
+        <div class="hero-grid">
+          <h1 id="contact-title">Contact ESBE Incorporated.</h1>
+          <div class="hero-copy">
+            <p>For public inquiries, governance requests, and nonprofit correspondence, reach ESBE Incorporated by email, phone, or mail at the registered address below.</p>
+            <div class="hero-actions"><a class="button primary" href="mailto:help@esbeincorporated.org">Email ESBE Incorporated <span aria-hidden="true">\u2197</span></a><a class="text-link" href="#details">Organization details <span aria-hidden="true">\u2193</span></a></div>
+          </div>
+        </div>
+        <div class="hero-rule" aria-hidden="true"></div>
+        <p class="hero-note">For help with an AIVA Claims account, start at aivaclaims.com \u2014 AIVA Claims is a program of ESBE Incorporated.</p>
+      </section>
+      <section class="contact" id="reach" aria-labelledby="reach-title">
+        <div><p class="section-mark">01</p><a class="permalink" href="#reach" aria-label="Copy link to how to reach us">#</a></div>
+        <div><p class="eyebrow">HOW TO REACH US</p><h2 id="reach-title">Email, phone, or mail.</h2><p class="contact-copy">For public inquiries, governance requests, and nonprofit correspondence, reach us by email or phone.</p><div class="contact-details"><a class="contact-email" href="mailto:help@esbeincorporated.org">help@esbeincorporated.org <span aria-hidden="true">\u2197</span></a><a class="contact-phone" href="tel:+18027153723">(802) 715-3723</a></div><p class="contact-address">Mailing and registered address: ESBE Incorporated, 1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</p></div>
+      </section>
+      <section class="transparency" id="details" aria-labelledby="contact-details-title">
+        <div class="section-heading"><div><p class="section-mark">02</p></div><div><p class="eyebrow">ORGANIZATION DETAILS</p><h2 id="contact-details-title">Who operates this site.</h2></div></div>
+        <dl class="facts"><div><dt>Organization</dt><dd>ESBE Incorporated</dd></div><div><dt>Federal status</dt><dd>501(c)(3) nonprofit organization</dd></div><div><dt>Registered address</dt><dd>1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</dd></div></dl>
+        <div class="transparency-links"><a href="${determinationLetter}">Read the IRS determination letter <span aria-hidden="true">\u2197</span></a><a href="mailto:help@esbeincorporated.org?subject=ESBE%20Incorporated%20transparency%20request">Request governance or filing information <span aria-hidden="true">\u2197</span></a></div>
+      </section>
+    </main>
+    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><p>Registered address: 1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
     <script type="module" src="/webmcp-tools.js"><\/script>
     <script type="module" src="/webmcp.js"><\/script>
     <script type="module" src="/ads.js"><\/script>
@@ -3475,7 +3976,7 @@ app.get(
     <header class="site-header">
       <a class="wordmark" href="/" aria-label="ESBE Incorporated home">ESBE <span>INC.</span></a>
       <nav aria-label="Primary navigation">
-        <a href="/#mission">Mission</a><a href="/#programs">Programs</a><a href="/community" aria-current="page">Community</a><a href="/donate">Donate</a><a href="/#transparency">Transparency</a><a href="/#contact">Contact</a>
+        <a href="/#mission">Mission</a><a href="/about">About</a><a href="/programs">Programs</a><a href="/community" aria-current="page">Community</a><a href="/donate">Donate</a><a href="/#transparency">Transparency</a><a href="/contact">Contact</a>
       </nav>
       <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">AIVA Claims — free help for veterans <span aria-hidden="true">↗</span></a>
     </header>
@@ -3518,11 +4019,11 @@ app.get(
 
       <section class="transparency" aria-labelledby="community-transparency-title">
         <div class="section-heading"><div><p class="section-mark">03</p></div><div><p class="eyebrow">TRANSPARENCY</p><h2 id="community-transparency-title">Clear identity. Clear accountability.</h2></div></div>
-        <dl class="facts"><div><dt>Organization</dt><dd>ESBE Incorporated</dd></div><div><dt>Federal tax ID</dt><dd>87-1218291</dd></div><div><dt>Federal status</dt><dd>501(c)(3) nonprofit organization</dd></div><div><dt>Government relationship</dt><dd>Independent nonprofit; not a government agency.</dd></div></dl>
+        <dl class="facts"><div><dt>Organization</dt><dd>ESBE Incorporated</dd></div><div><dt>Federal tax ID</dt><dd>87-1218291</dd></div><div><dt>Federal status</dt><dd>501(c)(3) nonprofit organization</dd></div><div><dt>Registered address</dt><dd>1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</dd></div><div><dt>Government relationship</dt><dd>Independent nonprofit; not a government agency.</dd></div></dl>
         <div class="transparency-links"><a href="${determinationLetter}" rel="noreferrer">Read the IRS determination letter <span aria-hidden="true">\u2197</span></a><a href="mailto:help@esbeincorporated.org?subject=ESBE%20Incorporated%20community%20inquiry">Contact us about this work <span aria-hidden="true">\u2197</span></a></div>
       </section>
     </main>
-    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
+    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><p>Registered address: 1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</p><div><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
     <script type="module" src="/webmcp-tools.js"><\/script>
     <script type="module" src="/webmcp.js"><\/script>
     <script type="module" src="/ads.js"><\/script>
@@ -3575,7 +4076,7 @@ app.get(
     <header class="site-header">
       <a class="wordmark" href="/" aria-label="ESBE Incorporated home">ESBE <span>INC.</span></a>
       <nav aria-label="Primary navigation">
-        <a href="/#mission">Mission</a><a href="/#programs">Programs</a><a href="/community">Community</a><a href="/donate">Donate</a><a href="/#transparency">Transparency</a><a href="/#contact">Contact</a>
+        <a href="/#mission">Mission</a><a href="/about">About</a><a href="/programs">Programs</a><a href="/community">Community</a><a href="/donate">Donate</a><a href="/#transparency">Transparency</a><a href="/contact">Contact</a>
       </nav>
       <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">AIVA Claims — free help for veterans <span aria-hidden="true">\u2197</span></a>
     </header>
@@ -3597,7 +4098,7 @@ app.get(
       <section class="statement" aria-labelledby="privacy-s4"><div><p class="section-mark">04</p></div><div><h2 id="privacy-s4">Who processes data</h2><p>Cloudflare provides hosting, DNS, and security. Google provides analytics and advertising measurement. Every.org processes donations under its own privacy policy. Each provider's handling of data is governed by its own policy.</p></div></section>
       <section class="statement" aria-labelledby="privacy-s5"><div><p class="section-mark">05</p></div><div><h2 id="privacy-s5">Contact and changes</h2><p>Questions about this policy: help@esbeincorporated.org or (802) 715-3723. If this policy changes, the updated version will be posted at this URL with a new Last updated date.</p></div></section>
     </main>
-    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
+    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><p>Registered address: 1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</p><div><span>\xA9 ${(new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
     <script type="module" src="/webmcp-tools.js"><\/script>
     <script type="module" src="/webmcp.js"><\/script>
     <script type="module" src="/ads.js"><\/script>
@@ -3650,7 +4151,7 @@ app.get(
     <header class="site-header">
       <a class="wordmark" href="/" aria-label="ESBE Incorporated home">ESBE <span>INC.</span></a>
       <nav aria-label="Primary navigation">
-        <a href="/#mission">Mission</a><a href="/#programs">Programs</a><a href="/community">Community</a><a href="/donate">Donate</a><a href="/#transparency">Transparency</a><a href="/#contact">Contact</a>
+        <a href="/#mission">Mission</a><a href="/about">About</a><a href="/programs">Programs</a><a href="/community">Community</a><a href="/donate">Donate</a><a href="/#transparency">Transparency</a><a href="/contact">Contact</a>
       </nav>
       <a class="header-cta" data-carry-params href="https://aivaclaims.com/sign-up?utm_source=esbeincorporated.org&amp;utm_medium=nonprofit_site&amp;utm_campaign=header_cta">AIVA Claims — free help for veterans <span aria-hidden="true">\u2197</span></a>
     </header>
@@ -3673,7 +4174,7 @@ app.get(
       <section class="statement" aria-labelledby="terms-s5"><div><p class="section-mark">05</p></div><div><h2 id="terms-s5">Third-party links and liability</h2><p>This site links to third-party websites and services; their content and terms are their own, and no endorsement is implied. To the maximum extent permitted by law, ESBE Incorporated is not liable for damages arising from use of this site or its MCP server, including reliance on its content. These terms are governed by the laws of the State of California.</p></div></section>
       <section class="statement" aria-labelledby="terms-s6"><div><p class="section-mark">06</p></div><div><h2 id="terms-s6">Changes and contact</h2><p>If these terms change, the updated version will be posted at this URL with a new Last updated date. Questions: help@esbeincorporated.org or (802) 715-3723.</p></div></section>
     </main>
-    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><div><span>\xA9 ${(new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
+    <footer><div class="footer-brand">ESBE INCORPORATED</div><p>${disclosure}</p><p>Registered address: 1070 Bridgeview Way, Apt 1010, San Francisco, CA 94158</p><div><span>\xA9 ${(new Date()).getFullYear()} ESBE Incorporated</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/">Back to home \u2191</a></div></footer>
     <script type="module" src="/webmcp-tools.js"><\/script>
     <script type="module" src="/webmcp.js"><\/script>
     <script type="module" src="/ads.js"><\/script>

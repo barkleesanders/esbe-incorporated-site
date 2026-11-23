@@ -6,7 +6,7 @@
 // render, never a parallel copy. See WEBMCP.md.
 window.WEBMCP_BEACON_URL = "/api/webmcp-beacon";
 
-var ESBE_PAGES = ["/", "/donate", "/community", "/va-claim-guide", "/nexus-letter", "/privacy", "/terms"];
+var ESBE_PAGES = ["/", "/donate", "/community", "/va-claim-guide", "/nexus-letter", "/privacy", "/terms", "/about", "/programs", "/contact"];
 
 function esbeTextResult(text) {
   return { content: [{ type: "text", text: text }] };
@@ -21,7 +21,7 @@ async function esbeFetchText(path) {
 window.WEBMCP_TOOLS = [
   {
     name: "get_page_guide",
-    description: "List ESBE Incorporated's public pages (home, donate, community, va claim guide, nexus letter, privacy, terms) with each page's title, description, URL, and last-updated date, from the site's own page catalog.",
+    description: "List ESBE Incorporated's public pages (home, donate, community, va claim guide, nexus letter, privacy, terms, about, programs, contact) with each page's title, description, URL, and last-updated date, from the site's own page catalog.",
     webmcpClass: "answer",
     inputSchema: { type: "object", properties: {}, additionalProperties: false },
     execute: async () => {
@@ -43,7 +43,7 @@ window.WEBMCP_TOOLS = [
   },
   {
     name: "search_site",
-    description: "Search the full text of ESBE Incorporated's public pages (home, donate, community, va claim guide, nexus letter, privacy, terms) and return matching excerpts with the page each came from.",
+    description: "Search the full text of ESBE Incorporated's public pages (home, donate, community, va claim guide, nexus letter, privacy, terms, about, programs, contact) and return matching excerpts with the page each came from.",
     webmcpClass: "answer",
     inputSchema: {
       type: "object",
@@ -106,20 +106,20 @@ window.WEBMCP_TOOLS = [
   },
   {
     name: "navigate_to_page",
-    description: "Navigate the visitor's browser to one of ESBE Incorporated's public pages: home (/), donate (/donate), community (/community), va claim guide (/va-claim-guide), nexus letter (/nexus-letter), privacy (/privacy), or terms (/terms). Only these internal paths are used.",
+    description: "Navigate the visitor's browser to one of ESBE Incorporated's public pages: home (/), donate (/donate), community (/community), va claim guide (/va-claim-guide), nexus letter (/nexus-letter), privacy (/privacy), terms (/terms), about (/about), programs (/programs), or contact (/contact). Only these internal paths are used.",
     webmcpClass: "action",
     inputSchema: {
       type: "object",
       properties: {
-        page: { type: "string", description: "Page key or path: home, donate, community, va-claim-guide, nexus-letter, privacy, terms — or the exact path like /donate" },
+        page: { type: "string", description: "Page key or path: home, donate, community, va-claim-guide, nexus-letter, privacy, terms, about, programs, contact — or the exact path like /donate" },
       },
       required: ["page"],
     },
     execute: async ({ page }) => {
-      const keys = { home: "/", donate: "/donate", community: "/community", "va-claim-guide": "/va-claim-guide", "nexus-letter": "/nexus-letter", privacy: "/privacy", terms: "/terms" };
+      const keys = { home: "/", donate: "/donate", community: "/community", "va-claim-guide": "/va-claim-guide", "nexus-letter": "/nexus-letter", privacy: "/privacy", terms: "/terms", about: "/about", programs: "/programs", contact: "/contact" };
       const key = String(page || "").trim().toLowerCase().replace(/^\//, "");
       const path = keys[key] || (ESBE_PAGES.indexOf("/" + key) !== -1 ? "/" + key : null);
-      if (!path) return { error: "page must be one of: home, donate, community, va-claim-guide, nexus-letter, privacy, terms" };
+      if (!path) return { error: "page must be one of: home, donate, community, va-claim-guide, nexus-letter, privacy, terms, about, programs, contact" };
       window.location.assign(path);
       return esbeTextResult("Navigating to " + path);
     },
